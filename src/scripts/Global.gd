@@ -1,6 +1,6 @@
 extends Node
 
-var speed = 0
+var speed = 0.0
 var slow_down = 1
 var SfxMuted = false
 

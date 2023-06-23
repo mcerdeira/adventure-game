@@ -3,6 +3,9 @@ var facing = 0
 var movement = Vector2.ZERO
 var back = false
 
+func both_axis(left, right, up, down):
+	return (left and down) or (left and up) or (right and down) or (right and up)
+
 func _physics_process(delta):
 	var left = Input.is_action_pressed("left")
 	var right = Input.is_action_pressed("right")
@@ -12,6 +15,9 @@ func _physics_process(delta):
 	var action2 = Input.is_action_pressed("action2")
 
 	var base_speed = Global.speed
+	if both_axis(left, right, up, down):
+		base_speed = Global.speed / 1.3
+	
 	if left:
 		movement.x = -base_speed / Global.slow_down
 		$sprite.scale.x = -1
