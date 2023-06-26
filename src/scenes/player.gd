@@ -3,6 +3,14 @@ var facing = 0
 var movement = Vector2.ZERO
 var back = false
 
+func _ready():
+	add_to_group("players")
+	if Global.PLAYER_POS != null:
+		position = Global.PLAYER_POS
+		$sprite.scale.x = Global.PLAYER_FACE
+		$eyes.scale.x = Global.PLAYER_FACE
+		back = Global.PLAYER_BACK
+
 func both_axis(left, right, up, down):
 	return (left and down) or (left and up) or (right and down) or (right and up)
 
@@ -46,7 +54,6 @@ func _physics_process(delta):
 		$sprite.animation = "idle"
 		
 	$eyes.visible = !back
-
 
 	movement = move_and_slide(movement, Vector2.UP)
 	

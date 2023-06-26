@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://art_vault/backgrounds/background0.png" type="Texture" id=1]
 [ext_resource path="res://art_vault/backgrounds/snow_border_tileset.png" type="Texture" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://art_vault/backgrounds/snow_tileset.png" type="Texture" id=5]
 [ext_resource path="res://art_vault/backgrounds/sand_tileset.png" type="Texture" id=6]
 [ext_resource path="res://sprites/water.tres" type="Texture" id=7]
+[ext_resource path="res://map/Map83.tscn" type="PackedScene" id=8]
+[ext_resource path="res://map/Map73.tscn" type="PackedScene" id=9]
+[ext_resource path="res://map/Map82.tscn" type="PackedScene" id=10]
 
 [sub_resource type="TileSet" id=1]
 0/name = "background0.png 0"
@@ -41,7 +44,7 @@
 2/texture = ExtResource( 6 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 0, 0, 63, 63 )
+2/region = Rect2( 0, 0, 64, 64 )
 2/tile_mode = 0
 2/occluder_offset = Vector2( 0, 0 )
 2/navigation_offset = Vector2( 0, 0 )
@@ -832,26 +835,13 @@ position = Vector2( 7168, 1200 )
 z_index = -4095
 tile_set = SubResource( 1 )
 format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
 
 [node name="LayerBottom" type="TileMap" parent="Map72"]
 z_index = -4096
 tile_set = SubResource( 2 )
 format = 1
 
-[node name="Map73" type="Node2D" parent="."]
-position = Vector2( 7168, 1800 )
-
-[node name="LayerTop" type="TileMap" parent="Map73"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="Map73"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
+[node name="Map73" parent="." instance=ExtResource( 9 )]
 
 [node name="Map74" type="Node2D" parent="."]
 position = Vector2( 7168, 2400 )
@@ -937,33 +927,9 @@ z_index = -4096
 tile_set = SubResource( 2 )
 format = 1
 
-[node name="Map82" type="Node2D" parent="."]
-position = Vector2( 8192, 1200 )
+[node name="Map82" parent="." instance=ExtResource( 10 )]
 
-[node name="LayerTop" type="TileMap" parent="Map82"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="Map82"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map83" type="Node2D" parent="."]
-position = Vector2( 8192, 1800 )
-
-[node name="LayerTop" type="TileMap" parent="Map83"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="Map83"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
+[node name="Map83" parent="." instance=ExtResource( 8 )]
 
 [node name="Map84" type="Node2D" parent="."]
 position = Vector2( 8192, 2400 )

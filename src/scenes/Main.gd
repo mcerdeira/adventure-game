@@ -1,16 +1,38 @@
 extends Node2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	LoadSceneFromPosition()
+	
+func change_map(dir):
+	if dir == "L":
+		var view = get_viewport_rect()
+		Global.PLAYER_POS = Vector2(view.size.x - 16, $player.position.y)
+		Global.GLOBAL_POS.x -= 1
+		Global.PLAYER_FACE = $player.facing
+		Global.PLAYER_BACK = $player.back
+	if dir == "R":
+		Global.PLAYER_POS = Vector2(16, $player.position.y)
+		Global.GLOBAL_POS.x += 1
+		Global.PLAYER_FACE = $player.facing
+		Global.PLAYER_BACK = $player.back
+		
+	if dir == "U":
+		var view = get_viewport_rect()
+		Global.PLAYER_POS = Vector2($player.position.x, view.size.y - 16)
+		Global.GLOBAL_POS.y -= 1
+		Global.PLAYER_FACE = $player.facing
+		Global.PLAYER_BACK = $player.back
+	if dir == "D":
+		Global.PLAYER_POS = Vector2($player.position.x, 16)
+		Global.GLOBAL_POS.y += 1
+		Global.PLAYER_FACE = $player.facing
+		Global.PLAYER_BACK = $player.back
+	
+	get_tree().reload_current_scene()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func LoadSceneFromPosition():
+	var pos_string = "Map" + str(Global.GLOBAL_POS.x) + str(Global.GLOBAL_POS.y)
+	var scene = load("res://map/" + pos_string + ".tscn")
+	var s = scene.instance()
+	add_child(s)
+	s.position = Vector2(0, 0)

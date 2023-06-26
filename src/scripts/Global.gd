@@ -1,5 +1,9 @@
 extends Node
 
+var GLOBAL_POS = Vector2()
+var PLAYER_POS = null
+var PLAYER_FACE = null
+var PLAYER_BACK = null
 var speed = 0.0
 var slow_down = 1
 var SfxMuted = false
@@ -11,13 +15,14 @@ func normal_cursor():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func boot_strap_game():
+	GLOBAL_POS.x = 8
+	GLOBAL_POS.y = 3
 	custom_cursor()
 	speed = 150.0
 	slow_down = 1
 
 func _ready():
 	boot_strap_game()
-
 
 func _input(event):
 	var cur_scene = get_tree().current_scene.name
