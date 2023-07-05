@@ -21,10 +21,14 @@ func _physics_process(delta):
 	var up = Input.is_action_pressed("up")
 	var action1 = Input.is_action_pressed("action1")
 	var action2 = Input.is_action_pressed("action2")
-
+	var run = Input.is_action_pressed("run")
 	var base_speed = Global.speed
+	
 	if both_axis(left, right, up, down):
 		base_speed = Global.speed / 1.3
+		
+	if run:
+		base_speed *= 2
 	
 	if left:
 		movement.x = -base_speed / Global.slow_down
@@ -38,7 +42,7 @@ func _physics_process(delta):
 		back = false
 		
 	facing = $sprite.scale.x
-	
+
 	if down:
 		movement.y = base_speed / Global.slow_down
 		back = false
@@ -64,3 +68,8 @@ func _physics_process(delta):
 		movement.x = lerp(movement.x, 0, 0.2)
 	
 	z_index = global_position.y + 16
+
+
+func _on_Area2D_area_entered(area):
+	print(area)
+

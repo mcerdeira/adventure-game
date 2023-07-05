@@ -1,12 +1,47 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/Main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/SideChecker.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/LimitChecker.tscn" type="PackedScene" id=4]
 
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform bool apply = true;
+uniform float amount = 0.1;
+uniform sampler2D offset_texture : hint_white;
+
+void fragment() {
+	vec4 texture_color = texture(SCREEN_TEXTURE, SCREEN_UV);
+	vec4 color = texture_color;
+	
+	if (apply == true) {
+		float adjusted_amount = amount * texture(offset_texture, SCREEN_UV).r / 100.0;
+		color.r = texture(SCREEN_TEXTURE, vec2(SCREEN_UV.x + adjusted_amount, SCREEN_UV.y)).r;
+		color.g = texture(SCREEN_TEXTURE, SCREEN_UV).g;
+		color.b = texture(SCREEN_TEXTURE, vec2(SCREEN_UV.x - adjusted_amount, SCREEN_UV.y)).b;
+	}
+	COLOR = color;
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+resource_local_to_scene = true
+shader = SubResource( 1 )
+shader_param/apply = true
+shader_param/amount = 0.1
+
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ChromaticAbrr" type="ColorRect" parent="CanvasLayer"]
+material = SubResource( 2 )
+margin_left = -600.0
+margin_top = -320.0
+margin_right = 1509.0
+margin_bottom = 924.0
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 399, 303 )

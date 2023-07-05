@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://art_vault/backgrounds/background0.png" type="Texture" id=1]
 [ext_resource path="res://art_vault/backgrounds/snow_border_tileset.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://art_vault/backgrounds/snow_tileset.png" type="Texture" id=5]
 [ext_resource path="res://art_vault/backgrounds/sand_tileset.png" type="Texture" id=6]
 [ext_resource path="res://sprites/water.tres" type="Texture" id=7]
+[ext_resource path="res://map/PathBlock.tscn" type="PackedScene" id=8]
 
 [sub_resource type="TileSet" id=1]
 0/name = "background0.png 0"
@@ -124,3 +125,7 @@ z_index = -4096
 tile_set = SubResource( 2 )
 format = 1
 tile_data = PoolIntArray( 458752, 0, 0, 524288, 0, 0, 589824, 0, 0 )
+
+[node name="PathBlock" parent="." instance=ExtResource( 8 )]
+position = Vector2( 29, 550 )
+scale = Vector2( 3.5, 10 )
