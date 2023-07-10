@@ -1,0 +1,570 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://sprites/map2.png" type="Texture" id=1]
+[ext_resource path="res://sprites/map0.png" type="Texture" id=2]
+[ext_resource path="res://sprites/map1.png" type="Texture" id=3]
+[ext_resource path="res://scenes/MiniMap.gd" type="Script" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "here",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "visited",
+"speed": 5.0
+} ]
+
+[node name="MiniMap" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="cell00" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+
+[node name="cell01" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 6 )
+frames = SubResource( 1 )
+
+[node name="cell02" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 12 )
+frames = SubResource( 1 )
+
+[node name="cell03" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 18 )
+frames = SubResource( 1 )
+
+[node name="cell04" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 24 )
+frames = SubResource( 1 )
+
+[node name="cell05" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 30 )
+frames = SubResource( 1 )
+
+[node name="cell06" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 36 )
+frames = SubResource( 1 )
+
+[node name="cell07" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 42 )
+frames = SubResource( 1 )
+
+[node name="cell10" type="AnimatedSprite" parent="."]
+position = Vector2( 6, 0 )
+frames = SubResource( 1 )
+
+[node name="cell11" type="AnimatedSprite" parent="."]
+position = Vector2( 6, 6 )
+frames = SubResource( 1 )
+
+[node name="cell12" type="AnimatedSprite" parent="."]
+position = Vector2( 6, 12 )
+frames = SubResource( 1 )
+
+[node name="cell13" type="AnimatedSprite" parent="."]
+position = Vector2( 6, 18 )
+frames = SubResource( 1 )
+
+[node name="cell14" type="AnimatedSprite" parent="."]
+position = Vector2( 6, 24 )
+frames = SubResource( 1 )
+
+[node name="cell15" type="AnimatedSprite" parent="."]
+position = Vector2( 6, 30 )
+frames = SubResource( 1 )
+
+[node name="cell16" type="AnimatedSprite" parent="."]
+position = Vector2( 6, 36 )
+frames = SubResource( 1 )
+
+[node name="cell17" type="AnimatedSprite" parent="."]
+position = Vector2( 6, 42 )
+frames = SubResource( 1 )
+
+[node name="cell20" type="AnimatedSprite" parent="."]
+position = Vector2( 12, 0 )
+frames = SubResource( 1 )
+
+[node name="cell21" type="AnimatedSprite" parent="."]
+position = Vector2( 12, 6 )
+frames = SubResource( 1 )
+
+[node name="cell22" type="AnimatedSprite" parent="."]
+position = Vector2( 12, 12 )
+frames = SubResource( 1 )
+
+[node name="cell23" type="AnimatedSprite" parent="."]
+position = Vector2( 12, 18 )
+frames = SubResource( 1 )
+
+[node name="cell24" type="AnimatedSprite" parent="."]
+position = Vector2( 12, 24 )
+frames = SubResource( 1 )
+
+[node name="cell25" type="AnimatedSprite" parent="."]
+position = Vector2( 12, 30 )
+frames = SubResource( 1 )
+
+[node name="cell26" type="AnimatedSprite" parent="."]
+position = Vector2( 12, 36 )
+frames = SubResource( 1 )
+
+[node name="cell27" type="AnimatedSprite" parent="."]
+position = Vector2( 12, 42 )
+frames = SubResource( 1 )
+
+[node name="cell30" type="AnimatedSprite" parent="."]
+position = Vector2( 18, 0 )
+frames = SubResource( 1 )
+
+[node name="cell31" type="AnimatedSprite" parent="."]
+position = Vector2( 18, 6 )
+frames = SubResource( 1 )
+
+[node name="cell32" type="AnimatedSprite" parent="."]
+position = Vector2( 18, 12 )
+frames = SubResource( 1 )
+
+[node name="cell33" type="AnimatedSprite" parent="."]
+position = Vector2( 18, 18 )
+frames = SubResource( 1 )
+
+[node name="cell34" type="AnimatedSprite" parent="."]
+position = Vector2( 18, 24 )
+frames = SubResource( 1 )
+
+[node name="cell35" type="AnimatedSprite" parent="."]
+position = Vector2( 18, 30 )
+frames = SubResource( 1 )
+
+[node name="cell36" type="AnimatedSprite" parent="."]
+position = Vector2( 18, 36 )
+frames = SubResource( 1 )
+
+[node name="cell37" type="AnimatedSprite" parent="."]
+position = Vector2( 18, 42 )
+frames = SubResource( 1 )
+
+[node name="cell40" type="AnimatedSprite" parent="."]
+position = Vector2( 24, 0 )
+frames = SubResource( 1 )
+
+[node name="cell41" type="AnimatedSprite" parent="."]
+position = Vector2( 24, 6 )
+frames = SubResource( 1 )
+
+[node name="cell42" type="AnimatedSprite" parent="."]
+position = Vector2( 24, 12 )
+frames = SubResource( 1 )
+
+[node name="cell43" type="AnimatedSprite" parent="."]
+position = Vector2( 24, 18 )
+frames = SubResource( 1 )
+
+[node name="cell44" type="AnimatedSprite" parent="."]
+position = Vector2( 24, 24 )
+frames = SubResource( 1 )
+
+[node name="cell45" type="AnimatedSprite" parent="."]
+position = Vector2( 24, 30 )
+frames = SubResource( 1 )
+
+[node name="cell46" type="AnimatedSprite" parent="."]
+position = Vector2( 24, 36 )
+frames = SubResource( 1 )
+
+[node name="cell47" type="AnimatedSprite" parent="."]
+position = Vector2( 24, 42 )
+frames = SubResource( 1 )
+
+[node name="cell50" type="AnimatedSprite" parent="."]
+position = Vector2( 30, 0 )
+frames = SubResource( 1 )
+
+[node name="cell51" type="AnimatedSprite" parent="."]
+position = Vector2( 30, 6 )
+frames = SubResource( 1 )
+
+[node name="cell52" type="AnimatedSprite" parent="."]
+position = Vector2( 30, 12 )
+frames = SubResource( 1 )
+
+[node name="cell53" type="AnimatedSprite" parent="."]
+position = Vector2( 30, 18 )
+frames = SubResource( 1 )
+
+[node name="cell54" type="AnimatedSprite" parent="."]
+position = Vector2( 30, 24 )
+frames = SubResource( 1 )
+
+[node name="cell55" type="AnimatedSprite" parent="."]
+position = Vector2( 30, 30 )
+frames = SubResource( 1 )
+
+[node name="cell56" type="AnimatedSprite" parent="."]
+position = Vector2( 30, 36 )
+frames = SubResource( 1 )
+
+[node name="cell57" type="AnimatedSprite" parent="."]
+position = Vector2( 30, 42 )
+frames = SubResource( 1 )
+
+[node name="cell60" type="AnimatedSprite" parent="."]
+position = Vector2( 36, 0 )
+frames = SubResource( 1 )
+
+[node name="cell61" type="AnimatedSprite" parent="."]
+position = Vector2( 36, 6 )
+frames = SubResource( 1 )
+
+[node name="cell62" type="AnimatedSprite" parent="."]
+position = Vector2( 36, 12 )
+frames = SubResource( 1 )
+
+[node name="cell63" type="AnimatedSprite" parent="."]
+position = Vector2( 36, 18 )
+frames = SubResource( 1 )
+
+[node name="cell64" type="AnimatedSprite" parent="."]
+position = Vector2( 36, 24 )
+frames = SubResource( 1 )
+
+[node name="cell65" type="AnimatedSprite" parent="."]
+position = Vector2( 36, 30 )
+frames = SubResource( 1 )
+
+[node name="cell66" type="AnimatedSprite" parent="."]
+position = Vector2( 36, 36 )
+frames = SubResource( 1 )
+
+[node name="cell67" type="AnimatedSprite" parent="."]
+position = Vector2( 36, 42 )
+frames = SubResource( 1 )
+
+[node name="cell70" type="AnimatedSprite" parent="."]
+position = Vector2( 42, 0 )
+frames = SubResource( 1 )
+
+[node name="cell71" type="AnimatedSprite" parent="."]
+position = Vector2( 42, 6 )
+frames = SubResource( 1 )
+
+[node name="cell72" type="AnimatedSprite" parent="."]
+position = Vector2( 42, 12 )
+frames = SubResource( 1 )
+
+[node name="cell73" type="AnimatedSprite" parent="."]
+position = Vector2( 42, 18 )
+frames = SubResource( 1 )
+
+[node name="cell74" type="AnimatedSprite" parent="."]
+position = Vector2( 42, 24 )
+frames = SubResource( 1 )
+
+[node name="cell75" type="AnimatedSprite" parent="."]
+position = Vector2( 42, 30 )
+frames = SubResource( 1 )
+
+[node name="cell76" type="AnimatedSprite" parent="."]
+position = Vector2( 42, 36 )
+frames = SubResource( 1 )
+
+[node name="cell77" type="AnimatedSprite" parent="."]
+position = Vector2( 42, 42 )
+frames = SubResource( 1 )
+
+[node name="cell80" type="AnimatedSprite" parent="."]
+position = Vector2( 48, 0 )
+frames = SubResource( 1 )
+
+[node name="cell81" type="AnimatedSprite" parent="."]
+position = Vector2( 48, 6 )
+frames = SubResource( 1 )
+
+[node name="cell82" type="AnimatedSprite" parent="."]
+position = Vector2( 48, 12 )
+frames = SubResource( 1 )
+
+[node name="cell83" type="AnimatedSprite" parent="."]
+position = Vector2( 48, 18 )
+frames = SubResource( 1 )
+
+[node name="cell84" type="AnimatedSprite" parent="."]
+position = Vector2( 48, 24 )
+frames = SubResource( 1 )
+
+[node name="cell85" type="AnimatedSprite" parent="."]
+position = Vector2( 48, 30 )
+frames = SubResource( 1 )
+
+[node name="cell86" type="AnimatedSprite" parent="."]
+position = Vector2( 48, 36 )
+frames = SubResource( 1 )
+
+[node name="cell87" type="AnimatedSprite" parent="."]
+position = Vector2( 48, 42 )
+frames = SubResource( 1 )
+
+[node name="cell90" type="AnimatedSprite" parent="."]
+position = Vector2( 54, 0 )
+frames = SubResource( 1 )
+
+[node name="cell91" type="AnimatedSprite" parent="."]
+position = Vector2( 54, 6 )
+frames = SubResource( 1 )
+
+[node name="cell92" type="AnimatedSprite" parent="."]
+position = Vector2( 54, 12 )
+frames = SubResource( 1 )
+
+[node name="cell93" type="AnimatedSprite" parent="."]
+position = Vector2( 54, 18 )
+frames = SubResource( 1 )
+
+[node name="cell94" type="AnimatedSprite" parent="."]
+position = Vector2( 54, 24 )
+frames = SubResource( 1 )
+
+[node name="cell95" type="AnimatedSprite" parent="."]
+position = Vector2( 54, 30 )
+frames = SubResource( 1 )
+
+[node name="cell96" type="AnimatedSprite" parent="."]
+position = Vector2( 54, 36 )
+frames = SubResource( 1 )
+
+[node name="cell97" type="AnimatedSprite" parent="."]
+position = Vector2( 54, 42 )
+frames = SubResource( 1 )
+
+[node name="cell100" type="AnimatedSprite" parent="."]
+position = Vector2( 60, 0 )
+frames = SubResource( 1 )
+
+[node name="cell101" type="AnimatedSprite" parent="."]
+position = Vector2( 60, 6 )
+frames = SubResource( 1 )
+
+[node name="cell102" type="AnimatedSprite" parent="."]
+position = Vector2( 60, 12 )
+frames = SubResource( 1 )
+
+[node name="cell103" type="AnimatedSprite" parent="."]
+position = Vector2( 60, 18 )
+frames = SubResource( 1 )
+
+[node name="cell104" type="AnimatedSprite" parent="."]
+position = Vector2( 60, 24 )
+frames = SubResource( 1 )
+
+[node name="cell105" type="AnimatedSprite" parent="."]
+position = Vector2( 60, 30 )
+frames = SubResource( 1 )
+
+[node name="cell106" type="AnimatedSprite" parent="."]
+position = Vector2( 60, 36 )
+frames = SubResource( 1 )
+
+[node name="cell107" type="AnimatedSprite" parent="."]
+position = Vector2( 60, 42 )
+frames = SubResource( 1 )
+
+[node name="cell110" type="AnimatedSprite" parent="."]
+position = Vector2( 66, 0 )
+frames = SubResource( 1 )
+
+[node name="cell111" type="AnimatedSprite" parent="."]
+position = Vector2( 66, 6 )
+frames = SubResource( 1 )
+
+[node name="cell112" type="AnimatedSprite" parent="."]
+position = Vector2( 66, 12 )
+frames = SubResource( 1 )
+
+[node name="cell113" type="AnimatedSprite" parent="."]
+position = Vector2( 66, 18 )
+frames = SubResource( 1 )
+
+[node name="cell114" type="AnimatedSprite" parent="."]
+position = Vector2( 66, 24 )
+frames = SubResource( 1 )
+
+[node name="cell115" type="AnimatedSprite" parent="."]
+position = Vector2( 66, 30 )
+frames = SubResource( 1 )
+
+[node name="cell116" type="AnimatedSprite" parent="."]
+position = Vector2( 66, 36 )
+frames = SubResource( 1 )
+
+[node name="cell117" type="AnimatedSprite" parent="."]
+position = Vector2( 66, 42 )
+frames = SubResource( 1 )
+
+[node name="cell120" type="AnimatedSprite" parent="."]
+position = Vector2( 72, 0 )
+frames = SubResource( 1 )
+
+[node name="cell121" type="AnimatedSprite" parent="."]
+position = Vector2( 72, 6 )
+frames = SubResource( 1 )
+
+[node name="cell122" type="AnimatedSprite" parent="."]
+position = Vector2( 72, 12 )
+frames = SubResource( 1 )
+
+[node name="cell123" type="AnimatedSprite" parent="."]
+position = Vector2( 72, 18 )
+frames = SubResource( 1 )
+
+[node name="cell124" type="AnimatedSprite" parent="."]
+position = Vector2( 72, 24 )
+frames = SubResource( 1 )
+
+[node name="cell125" type="AnimatedSprite" parent="."]
+position = Vector2( 72, 30 )
+frames = SubResource( 1 )
+
+[node name="cell126" type="AnimatedSprite" parent="."]
+position = Vector2( 72, 36 )
+frames = SubResource( 1 )
+
+[node name="cell127" type="AnimatedSprite" parent="."]
+position = Vector2( 72, 42 )
+frames = SubResource( 1 )
+
+[node name="cell130" type="AnimatedSprite" parent="."]
+position = Vector2( 78, 0 )
+frames = SubResource( 1 )
+
+[node name="cell131" type="AnimatedSprite" parent="."]
+position = Vector2( 78, 6 )
+frames = SubResource( 1 )
+
+[node name="cell132" type="AnimatedSprite" parent="."]
+position = Vector2( 78, 12 )
+frames = SubResource( 1 )
+
+[node name="cell133" type="AnimatedSprite" parent="."]
+position = Vector2( 78, 18 )
+frames = SubResource( 1 )
+
+[node name="cell134" type="AnimatedSprite" parent="."]
+position = Vector2( 78, 24 )
+frames = SubResource( 1 )
+
+[node name="cell135" type="AnimatedSprite" parent="."]
+position = Vector2( 78, 30 )
+frames = SubResource( 1 )
+
+[node name="cell136" type="AnimatedSprite" parent="."]
+position = Vector2( 78, 36 )
+frames = SubResource( 1 )
+
+[node name="cell137" type="AnimatedSprite" parent="."]
+position = Vector2( 78, 42 )
+frames = SubResource( 1 )
+
+[node name="cell140" type="AnimatedSprite" parent="."]
+position = Vector2( 84, 0 )
+frames = SubResource( 1 )
+
+[node name="cell141" type="AnimatedSprite" parent="."]
+position = Vector2( 84, 6 )
+frames = SubResource( 1 )
+
+[node name="cell142" type="AnimatedSprite" parent="."]
+position = Vector2( 84, 12 )
+frames = SubResource( 1 )
+
+[node name="cell143" type="AnimatedSprite" parent="."]
+position = Vector2( 84, 18 )
+frames = SubResource( 1 )
+
+[node name="cell144" type="AnimatedSprite" parent="."]
+position = Vector2( 84, 24 )
+frames = SubResource( 1 )
+
+[node name="cell145" type="AnimatedSprite" parent="."]
+position = Vector2( 84, 30 )
+frames = SubResource( 1 )
+
+[node name="cell146" type="AnimatedSprite" parent="."]
+position = Vector2( 84, 36 )
+frames = SubResource( 1 )
+
+[node name="cell147" type="AnimatedSprite" parent="."]
+position = Vector2( 84, 42 )
+frames = SubResource( 1 )
+
+[node name="cell150" type="AnimatedSprite" parent="."]
+position = Vector2( 90, 0 )
+frames = SubResource( 1 )
+
+[node name="cell151" type="AnimatedSprite" parent="."]
+position = Vector2( 90, 6 )
+frames = SubResource( 1 )
+
+[node name="cell152" type="AnimatedSprite" parent="."]
+position = Vector2( 90, 12 )
+frames = SubResource( 1 )
+
+[node name="cell153" type="AnimatedSprite" parent="."]
+position = Vector2( 90, 18 )
+frames = SubResource( 1 )
+
+[node name="cell154" type="AnimatedSprite" parent="."]
+position = Vector2( 90, 24 )
+frames = SubResource( 1 )
+
+[node name="cell155" type="AnimatedSprite" parent="."]
+position = Vector2( 90, 30 )
+frames = SubResource( 1 )
+
+[node name="cell156" type="AnimatedSprite" parent="."]
+position = Vector2( 90, 36 )
+frames = SubResource( 1 )
+
+[node name="cell157" type="AnimatedSprite" parent="."]
+position = Vector2( 90, 42 )
+frames = SubResource( 1 )
+
+[node name="cell160" type="AnimatedSprite" parent="."]
+position = Vector2( 96, 0 )
+frames = SubResource( 1 )
+
+[node name="cell161" type="AnimatedSprite" parent="."]
+position = Vector2( 96, 6 )
+frames = SubResource( 1 )
+
+[node name="cell162" type="AnimatedSprite" parent="."]
+position = Vector2( 96, 12 )
+frames = SubResource( 1 )
+
+[node name="cell163" type="AnimatedSprite" parent="."]
+position = Vector2( 96, 18 )
+frames = SubResource( 1 )
+
+[node name="cell164" type="AnimatedSprite" parent="."]
+position = Vector2( 96, 24 )
+frames = SubResource( 1 )
+
+[node name="cell165" type="AnimatedSprite" parent="."]
+position = Vector2( 96, 30 )
+frames = SubResource( 1 )
+
+[node name="cell166" type="AnimatedSprite" parent="."]
+position = Vector2( 96, 36 )
+frames = SubResource( 1 )
+
+[node name="cell167" type="AnimatedSprite" parent="."]
+position = Vector2( 96, 42 )
+frames = SubResource( 1 )

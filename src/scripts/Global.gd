@@ -1,6 +1,7 @@
 extends Node
 
 var GLOBAL_POS = Vector2()
+var GLOBAL_VISITED = [[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false]]
 var PLAYER_POS = null
 var PLAYER_FACE = null
 var PLAYER_BACK = null

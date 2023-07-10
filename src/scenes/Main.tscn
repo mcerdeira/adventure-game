@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/Main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/SideChecker.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/LimitChecker.tscn" type="PackedScene" id=4]
+[ext_resource path="res://fonts/prstartk.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://scenes/MiniMap.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -31,6 +33,10 @@ shader = SubResource( 1 )
 shader_param/apply = true
 shader_param/amount = 0.1
 
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 5 )
+
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -42,6 +48,9 @@ margin_left = -600.0
 margin_top = -320.0
 margin_right = 1509.0
 margin_bottom = 924.0
+
+[node name="MiniMap" parent="." instance=ExtResource( 6 )]
+position = Vector2( 6, 4 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 399, 303 )
@@ -59,3 +68,11 @@ dir = "U"
 [node name="LimitChecker2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 0, 720 )
 dir = "D"
+
+[node name="lbl_coordinates" type="Label" parent="."]
+margin_left = 107.0
+margin_top = 2.0
+margin_right = 517.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 3 )
+text = "MAP"

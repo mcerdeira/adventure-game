@@ -31,8 +31,10 @@ func change_map(dir):
 	get_tree().reload_current_scene()
 
 func LoadSceneFromPosition():
+	Global.GLOBAL_VISITED[Global.GLOBAL_POS.x][Global.GLOBAL_POS.y] = true
 	var pos_string = "Map" + str(Global.GLOBAL_POS.x) + str(Global.GLOBAL_POS.y)
 	var scene = load("res://map/" + pos_string + ".tscn")
 	var s = scene.instance()
 	add_child(s)
 	s.position = Vector2(0, 0)
+	$lbl_coordinates.text = "X:" + str(Global.GLOBAL_POS.x) + " Y:" + str(Global.GLOBAL_POS.y)

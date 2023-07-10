@@ -1,659 +1,147 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=138 format=2]
 
-[ext_resource path="res://art_vault/backgrounds/background0.png" type="Texture" id=1]
-[ext_resource path="res://art_vault/backgrounds/snow_border_tileset.png" type="Texture" id=2]
-[ext_resource path="res://art_vault/backgrounds/grass_border_tileset.png" type="Texture" id=3]
-[ext_resource path="res://art_vault/backgrounds/sand_border_tileset.png" type="Texture" id=4]
-[ext_resource path="res://art_vault/backgrounds/snow_tileset.png" type="Texture" id=5]
-[ext_resource path="res://art_vault/backgrounds/sand_tileset.png" type="Texture" id=6]
-[ext_resource path="res://sprites/water.tres" type="Texture" id=7]
+[ext_resource path="res://map/Map164.tscn" type="PackedScene" id=1]
+[ext_resource path="res://map/Map165.tscn" type="PackedScene" id=2]
+[ext_resource path="res://map/Map166.tscn" type="PackedScene" id=3]
 [ext_resource path="res://docs/map.png" type="Texture" id=8]
-[ext_resource path="res://art_vault/backgrounds/dirt_tileset.png" type="Texture" id=9]
-[ext_resource path="res://art_vault/backgrounds/dirt_border_tileset.png" type="Texture" id=10]
-
-[sub_resource type="TileSet" id=1]
-0/name = "background0.png 0"
-0/texture = ExtResource( 1 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 1, -2, 65, 65 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-1/name = "grass_border_tileset.png 1"
-1/texture = ExtResource( 3 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 0, 0, 64, 81 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 0, 0 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape_one_way = false
-1/shape_one_way_margin = 0.0
-1/shapes = [  ]
-1/z_index = 0
-2/name = "sand_tileset.png 2"
-2/texture = ExtResource( 6 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 0, 0, 64, 64 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape_one_way = false
-2/shape_one_way_margin = 0.0
-2/shapes = [  ]
-2/z_index = 0
-3/name = "sand_border_tileset.png 3"
-3/texture = ExtResource( 4 )
-3/tex_offset = Vector2( 0, 0 )
-3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 0, 0, 63, 81 )
-3/tile_mode = 0
-3/occluder_offset = Vector2( 0, 0 )
-3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape_one_way = false
-3/shape_one_way_margin = 0.0
-3/shapes = [  ]
-3/z_index = 0
-4/name = "snow_tileset.png 4"
-4/texture = ExtResource( 5 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 0, 0, 64, 64 )
-4/tile_mode = 0
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape_one_way = false
-4/shape_one_way_margin = 0.0
-4/shapes = [  ]
-4/z_index = 0
-5/name = "snow_border_tileset.png 5"
-5/texture = ExtResource( 2 )
-5/tex_offset = Vector2( 0, 0 )
-5/modulate = Color( 1, 1, 1, 1 )
-5/region = Rect2( 0, 0, 65, 82 )
-5/tile_mode = 0
-5/occluder_offset = Vector2( 0, 0 )
-5/navigation_offset = Vector2( 0, 0 )
-5/shape_offset = Vector2( 0, 0 )
-5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape_one_way = false
-5/shape_one_way_margin = 0.0
-5/shapes = [  ]
-5/z_index = 0
-6/name = "dirt_tileset.png 6"
-6/texture = ExtResource( 9 )
-6/tex_offset = Vector2( 0, 0 )
-6/modulate = Color( 1, 1, 1, 1 )
-6/region = Rect2( 0, 0, 64, 64 )
-6/tile_mode = 0
-6/occluder_offset = Vector2( 0, 0 )
-6/navigation_offset = Vector2( 0, 0 )
-6/shape_offset = Vector2( 0, 0 )
-6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-6/shape_one_way = false
-6/shape_one_way_margin = 0.0
-6/shapes = [  ]
-6/z_index = 0
-7/name = "dirt_border_tileset.png 7"
-7/texture = ExtResource( 10 )
-7/tex_offset = Vector2( 0, 0 )
-7/modulate = Color( 1, 1, 1, 1 )
-7/region = Rect2( 0, 0, 64, 80 )
-7/tile_mode = 0
-7/occluder_offset = Vector2( 0, 0 )
-7/navigation_offset = Vector2( 0, 0 )
-7/shape_offset = Vector2( 0, 0 )
-7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-7/shape_one_way = false
-7/shape_one_way_margin = 0.0
-7/shapes = [  ]
-7/z_index = 0
-
-[sub_resource type="TileSet" id=2]
-0/name = "water.tres 0"
-0/texture = ExtResource( 7 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 64, 64 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-
-[sub_resource type="TileSet" id=11]
-0/name = "background0.png 0"
-0/texture = ExtResource( 1 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 1, -2, 65, 65 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-1/name = "grass_border_tileset.png 1"
-1/texture = ExtResource( 3 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 0, 0, 64, 81 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 0, 0 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape_one_way = false
-1/shape_one_way_margin = 0.0
-1/shapes = [  ]
-1/z_index = 0
-2/name = "sand_tileset.png 2"
-2/texture = ExtResource( 6 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 0, 0, 64, 64 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape_one_way = false
-2/shape_one_way_margin = 0.0
-2/shapes = [  ]
-2/z_index = 0
-3/name = "sand_border_tileset.png 3"
-3/texture = ExtResource( 4 )
-3/tex_offset = Vector2( 0, 0 )
-3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 0, 0, 63, 81 )
-3/tile_mode = 0
-3/occluder_offset = Vector2( 0, 0 )
-3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape_one_way = false
-3/shape_one_way_margin = 0.0
-3/shapes = [  ]
-3/z_index = 0
-4/name = "snow_tileset.png 4"
-4/texture = ExtResource( 5 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 0, 0, 64, 64 )
-4/tile_mode = 0
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape_one_way = false
-4/shape_one_way_margin = 0.0
-4/shapes = [  ]
-4/z_index = 0
-5/name = "snow_border_tileset.png 5"
-5/texture = ExtResource( 2 )
-5/tex_offset = Vector2( 0, 0 )
-5/modulate = Color( 1, 1, 1, 1 )
-5/region = Rect2( 0, 0, 65, 82 )
-5/tile_mode = 0
-5/occluder_offset = Vector2( 0, 0 )
-5/navigation_offset = Vector2( 0, 0 )
-5/shape_offset = Vector2( 0, 0 )
-5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape_one_way = false
-5/shape_one_way_margin = 0.0
-5/shapes = [  ]
-5/z_index = 0
-
-[sub_resource type="TileSet" id=12]
-0/name = "water.tres 0"
-0/texture = ExtResource( 7 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 64, 64 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-
-[sub_resource type="TileSet" id=3]
-0/name = "background0.png 0"
-0/texture = ExtResource( 1 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 1, -2, 65, 65 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-1/name = "grass_border_tileset.png 1"
-1/texture = ExtResource( 3 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 0, 0, 64, 81 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 0, 0 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape_one_way = false
-1/shape_one_way_margin = 0.0
-1/shapes = [  ]
-1/z_index = 0
-2/name = "sand_tileset.png 2"
-2/texture = ExtResource( 6 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 0, 0, 64, 64 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape_one_way = false
-2/shape_one_way_margin = 0.0
-2/shapes = [  ]
-2/z_index = 0
-3/name = "sand_border_tileset.png 3"
-3/texture = ExtResource( 4 )
-3/tex_offset = Vector2( 0, 0 )
-3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 0, 0, 65, 81 )
-3/tile_mode = 0
-3/occluder_offset = Vector2( 0, 0 )
-3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape_one_way = false
-3/shape_one_way_margin = 0.0
-3/shapes = [  ]
-3/z_index = 0
-4/name = "snow_tileset.png 4"
-4/texture = ExtResource( 5 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 0, 0, 64, 64 )
-4/tile_mode = 0
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape_one_way = false
-4/shape_one_way_margin = 0.0
-4/shapes = [  ]
-4/z_index = 0
-5/name = "snow_border_tileset.png 5"
-5/texture = ExtResource( 2 )
-5/tex_offset = Vector2( 0, 0 )
-5/modulate = Color( 1, 1, 1, 1 )
-5/region = Rect2( 0, 0, 65, 82 )
-5/tile_mode = 0
-5/occluder_offset = Vector2( 0, 0 )
-5/navigation_offset = Vector2( 0, 0 )
-5/shape_offset = Vector2( 0, 0 )
-5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape_one_way = false
-5/shape_one_way_margin = 0.0
-5/shapes = [  ]
-5/z_index = 0
-
-[sub_resource type="TileSet" id=4]
-0/name = "water.tres 0"
-0/texture = ExtResource( 7 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 64, 64 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-
-[sub_resource type="TileSet" id=5]
-0/name = "background0.png 0"
-0/texture = ExtResource( 1 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 1, -2, 65, 65 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-1/name = "grass_border_tileset.png 1"
-1/texture = ExtResource( 3 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 0, 0, 64, 81 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 0, 0 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape_one_way = false
-1/shape_one_way_margin = 0.0
-1/shapes = [  ]
-1/z_index = 0
-2/name = "sand_tileset.png 2"
-2/texture = ExtResource( 6 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 0, 0, 63, 63 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape_one_way = false
-2/shape_one_way_margin = 0.0
-2/shapes = [  ]
-2/z_index = 0
-3/name = "sand_border_tileset.png 3"
-3/texture = ExtResource( 4 )
-3/tex_offset = Vector2( 0, 0 )
-3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 0, 0, 63, 81 )
-3/tile_mode = 0
-3/occluder_offset = Vector2( 0, 0 )
-3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape_one_way = false
-3/shape_one_way_margin = 0.0
-3/shapes = [  ]
-3/z_index = 0
-4/name = "snow_tileset.png 4"
-4/texture = ExtResource( 5 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 0, 0, 64, 64 )
-4/tile_mode = 0
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape_one_way = false
-4/shape_one_way_margin = 0.0
-4/shapes = [  ]
-4/z_index = 0
-5/name = "snow_border_tileset.png 5"
-5/texture = ExtResource( 2 )
-5/tex_offset = Vector2( 0, 0 )
-5/modulate = Color( 1, 1, 1, 1 )
-5/region = Rect2( 0, 0, 65, 82 )
-5/tile_mode = 0
-5/occluder_offset = Vector2( 0, 0 )
-5/navigation_offset = Vector2( 0, 0 )
-5/shape_offset = Vector2( 0, 0 )
-5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape_one_way = false
-5/shape_one_way_margin = 0.0
-5/shapes = [  ]
-5/z_index = 0
-
-[sub_resource type="TileSet" id=6]
-0/name = "water.tres 0"
-0/texture = ExtResource( 7 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 64, 64 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-
-[sub_resource type="TileSet" id=7]
-0/name = "background0.png 0"
-0/texture = ExtResource( 1 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 1, -2, 65, 65 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-1/name = "grass_border_tileset.png 1"
-1/texture = ExtResource( 3 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 0, 0, 64, 81 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 0, 0 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape_one_way = false
-1/shape_one_way_margin = 0.0
-1/shapes = [  ]
-1/z_index = 0
-2/name = "sand_tileset.png 2"
-2/texture = ExtResource( 6 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 0, 0, 63, 63 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape_one_way = false
-2/shape_one_way_margin = 0.0
-2/shapes = [  ]
-2/z_index = 0
-3/name = "sand_border_tileset.png 3"
-3/texture = ExtResource( 4 )
-3/tex_offset = Vector2( 0, 0 )
-3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 0, 0, 63, 81 )
-3/tile_mode = 0
-3/occluder_offset = Vector2( 0, 0 )
-3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape_one_way = false
-3/shape_one_way_margin = 0.0
-3/shapes = [  ]
-3/z_index = 0
-4/name = "snow_tileset.png 4"
-4/texture = ExtResource( 5 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 0, 0, 64, 64 )
-4/tile_mode = 0
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape_one_way = false
-4/shape_one_way_margin = 0.0
-4/shapes = [  ]
-4/z_index = 0
-5/name = "snow_border_tileset.png 5"
-5/texture = ExtResource( 2 )
-5/tex_offset = Vector2( 0, 0 )
-5/modulate = Color( 1, 1, 1, 1 )
-5/region = Rect2( 0, 0, 65, 82 )
-5/tile_mode = 0
-5/occluder_offset = Vector2( 0, 0 )
-5/navigation_offset = Vector2( 0, 0 )
-5/shape_offset = Vector2( 0, 0 )
-5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape_one_way = false
-5/shape_one_way_margin = 0.0
-5/shapes = [  ]
-5/z_index = 0
-
-[sub_resource type="TileSet" id=8]
-0/name = "water.tres 0"
-0/texture = ExtResource( 7 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 64, 64 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-
-[sub_resource type="TileSet" id=9]
-0/name = "background0.png 0"
-0/texture = ExtResource( 1 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 1, -2, 65, 65 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-1/name = "grass_border_tileset.png 1"
-1/texture = ExtResource( 3 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 0, 0, 64, 81 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 0, 0 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape_one_way = false
-1/shape_one_way_margin = 0.0
-1/shapes = [  ]
-1/z_index = 0
-2/name = "sand_tileset.png 2"
-2/texture = ExtResource( 6 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 0, 0, 64, 64 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape_one_way = false
-2/shape_one_way_margin = 0.0
-2/shapes = [  ]
-2/z_index = 0
-3/name = "sand_border_tileset.png 3"
-3/texture = ExtResource( 4 )
-3/tex_offset = Vector2( 0, 0 )
-3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 0, 0, 63, 81 )
-3/tile_mode = 0
-3/occluder_offset = Vector2( 0, 0 )
-3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape_one_way = false
-3/shape_one_way_margin = 0.0
-3/shapes = [  ]
-3/z_index = 0
-4/name = "snow_tileset.png 4"
-4/texture = ExtResource( 5 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 0, 0, 64, 64 )
-4/tile_mode = 0
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape_one_way = false
-4/shape_one_way_margin = 0.0
-4/shapes = [  ]
-4/z_index = 0
-5/name = "snow_border_tileset.png 5"
-5/texture = ExtResource( 2 )
-5/tex_offset = Vector2( 0, 0 )
-5/modulate = Color( 1, 1, 1, 1 )
-5/region = Rect2( 0, 0, 65, 82 )
-5/tile_mode = 0
-5/occluder_offset = Vector2( 0, 0 )
-5/navigation_offset = Vector2( 0, 0 )
-5/shape_offset = Vector2( 0, 0 )
-5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape_one_way = false
-5/shape_one_way_margin = 0.0
-5/shapes = [  ]
-5/z_index = 0
-
-[sub_resource type="TileSet" id=10]
-0/name = "water.tres 0"
-0/texture = ExtResource( 7 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 64, 64 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
+[ext_resource path="res://map/Map83.tscn" type="PackedScene" id=13]
+[ext_resource path="res://map/Map73.tscn" type="PackedScene" id=14]
+[ext_resource path="res://map/Map82.tscn" type="PackedScene" id=15]
+[ext_resource path="res://map/Map00.tscn" type="PackedScene" id=16]
+[ext_resource path="res://map/Map13.tscn" type="PackedScene" id=17]
+[ext_resource path="res://map/Map11.tscn" type="PackedScene" id=18]
+[ext_resource path="res://map/Map14.tscn" type="PackedScene" id=19]
+[ext_resource path="res://map/Map12.tscn" type="PackedScene" id=20]
+[ext_resource path="res://map/Map10.tscn" type="PackedScene" id=21]
+[ext_resource path="res://map/Map15.tscn" type="PackedScene" id=22]
+[ext_resource path="res://map/Map17.tscn" type="PackedScene" id=23]
+[ext_resource path="res://map/Map16.tscn" type="PackedScene" id=24]
+[ext_resource path="res://map/Map20.tscn" type="PackedScene" id=25]
+[ext_resource path="res://map/Map21.tscn" type="PackedScene" id=26]
+[ext_resource path="res://map/Map22.tscn" type="PackedScene" id=27]
+[ext_resource path="res://map/Map25.tscn" type="PackedScene" id=28]
+[ext_resource path="res://map/Map26.tscn" type="PackedScene" id=29]
+[ext_resource path="res://map/Map27.tscn" type="PackedScene" id=30]
+[ext_resource path="res://map/Map24.tscn" type="PackedScene" id=31]
+[ext_resource path="res://map/Map23.tscn" type="PackedScene" id=32]
+[ext_resource path="res://map/Map50.tscn" type="PackedScene" id=33]
+[ext_resource path="res://map/Map30.tscn" type="PackedScene" id=34]
+[ext_resource path="res://map/Map32.tscn" type="PackedScene" id=35]
+[ext_resource path="res://map/Map33.tscn" type="PackedScene" id=36]
+[ext_resource path="res://map/Map31.tscn" type="PackedScene" id=37]
+[ext_resource path="res://map/Map34.tscn" type="PackedScene" id=38]
+[ext_resource path="res://map/Map37.tscn" type="PackedScene" id=39]
+[ext_resource path="res://map/Map35.tscn" type="PackedScene" id=40]
+[ext_resource path="res://map/Map43.tscn" type="PackedScene" id=41]
+[ext_resource path="res://map/Map40.tscn" type="PackedScene" id=42]
+[ext_resource path="res://map/Map36.tscn" type="PackedScene" id=43]
+[ext_resource path="res://map/Map42.tscn" type="PackedScene" id=44]
+[ext_resource path="res://map/Map44.tscn" type="PackedScene" id=45]
+[ext_resource path="res://map/Map41.tscn" type="PackedScene" id=46]
+[ext_resource path="res://map/Map46.tscn" type="PackedScene" id=47]
+[ext_resource path="res://map/Map47.tscn" type="PackedScene" id=48]
+[ext_resource path="res://map/Map45.tscn" type="PackedScene" id=49]
+[ext_resource path="res://map/Map55.tscn" type="PackedScene" id=50]
+[ext_resource path="res://map/Map56.tscn" type="PackedScene" id=51]
+[ext_resource path="res://map/Map51.tscn" type="PackedScene" id=52]
+[ext_resource path="res://map/Map54.tscn" type="PackedScene" id=53]
+[ext_resource path="res://map/Map53.tscn" type="PackedScene" id=54]
+[ext_resource path="res://map/Map52.tscn" type="PackedScene" id=55]
+[ext_resource path="res://map/Map85.tscn" type="PackedScene" id=56]
+[ext_resource path="res://map/Map77.tscn" type="PackedScene" id=57]
+[ext_resource path="res://map/Map63.tscn" type="PackedScene" id=58]
+[ext_resource path="res://map/Map81.tscn" type="PackedScene" id=59]
+[ext_resource path="res://map/Map71.tscn" type="PackedScene" id=60]
+[ext_resource path="res://map/Map94.tscn" type="PackedScene" id=61]
+[ext_resource path="res://map/Map105.tscn" type="PackedScene" id=62]
+[ext_resource path="res://map/Map102.tscn" type="PackedScene" id=63]
+[ext_resource path="res://map/Map95.tscn" type="PackedScene" id=64]
+[ext_resource path="res://map/Map92.tscn" type="PackedScene" id=65]
+[ext_resource path="res://map/Map67.tscn" type="PackedScene" id=66]
+[ext_resource path="res://map/Map90.tscn" type="PackedScene" id=67]
+[ext_resource path="res://map/Map74.tscn" type="PackedScene" id=68]
+[ext_resource path="res://map/Map70.tscn" type="PackedScene" id=69]
+[ext_resource path="res://map/Map104.tscn" type="PackedScene" id=70]
+[ext_resource path="res://map/Map87.tscn" type="PackedScene" id=71]
+[ext_resource path="res://map/Map91.tscn" type="PackedScene" id=72]
+[ext_resource path="res://map/Map96.tscn" type="PackedScene" id=73]
+[ext_resource path="res://map/Map100.tscn" type="PackedScene" id=74]
+[ext_resource path="res://map/Map86.tscn" type="PackedScene" id=75]
+[ext_resource path="res://map/Map97.tscn" type="PackedScene" id=76]
+[ext_resource path="res://map/Map72.tscn" type="PackedScene" id=77]
+[ext_resource path="res://map/Map75.tscn" type="PackedScene" id=78]
+[ext_resource path="res://map/Map84.tscn" type="PackedScene" id=79]
+[ext_resource path="res://map/Map66.tscn" type="PackedScene" id=80]
+[ext_resource path="res://map/Map101.tscn" type="PackedScene" id=81]
+[ext_resource path="res://map/Map80.tscn" type="PackedScene" id=82]
+[ext_resource path="res://map/Map65.tscn" type="PackedScene" id=83]
+[ext_resource path="res://map/Map64.tscn" type="PackedScene" id=84]
+[ext_resource path="res://map/Map93.tscn" type="PackedScene" id=85]
+[ext_resource path="res://map/Map103.tscn" type="PackedScene" id=86]
+[ext_resource path="res://map/Map76.tscn" type="PackedScene" id=87]
+[ext_resource path="res://map/Map61.tscn" type="PackedScene" id=88]
+[ext_resource path="res://map/Map62.tscn" type="PackedScene" id=89]
+[ext_resource path="res://map/Map57.tscn" type="PackedScene" id=90]
+[ext_resource path="res://map/Map60.tscn" type="PackedScene" id=91]
+[ext_resource path="res://map/Map110.tscn" type="PackedScene" id=92]
+[ext_resource path="res://map/Map112.tscn" type="PackedScene" id=93]
+[ext_resource path="res://map/Map113.tscn" type="PackedScene" id=94]
+[ext_resource path="res://map/Map116.tscn" type="PackedScene" id=95]
+[ext_resource path="res://map/Map117.tscn" type="PackedScene" id=96]
+[ext_resource path="res://map/Map114.tscn" type="PackedScene" id=97]
+[ext_resource path="res://map/Map111.tscn" type="PackedScene" id=98]
+[ext_resource path="res://map/Map115.tscn" type="PackedScene" id=99]
+[ext_resource path="res://map/Map121.tscn" type="PackedScene" id=100]
+[ext_resource path="res://map/Map107.tscn" type="PackedScene" id=101]
+[ext_resource path="res://map/Map120.tscn" type="PackedScene" id=102]
+[ext_resource path="res://map/Map122.tscn" type="PackedScene" id=103]
+[ext_resource path="res://map/Map123.tscn" type="PackedScene" id=104]
+[ext_resource path="res://map/Map106.tscn" type="PackedScene" id=105]
+[ext_resource path="res://map/Map124.tscn" type="PackedScene" id=106]
+[ext_resource path="res://map/Map125.tscn" type="PackedScene" id=107]
+[ext_resource path="res://map/Map126.tscn" type="PackedScene" id=108]
+[ext_resource path="res://map/Map127.tscn" type="PackedScene" id=109]
+[ext_resource path="res://map/Map130.tscn" type="PackedScene" id=110]
+[ext_resource path="res://map/Map02.tscn" type="PackedScene" id=111]
+[ext_resource path="res://map/Map03.tscn" type="PackedScene" id=112]
+[ext_resource path="res://map/Map04.tscn" type="PackedScene" id=113]
+[ext_resource path="res://map/Map01.tscn" type="PackedScene" id=114]
+[ext_resource path="res://map/Map06.tscn" type="PackedScene" id=115]
+[ext_resource path="res://map/Map05.tscn" type="PackedScene" id=116]
+[ext_resource path="res://map/Map07.tscn" type="PackedScene" id=117]
+[ext_resource path="res://map/Map167.tscn" type="PackedScene" id=118]
+[ext_resource path="res://map/Map131.tscn" type="PackedScene" id=119]
+[ext_resource path="res://map/Map134.tscn" type="PackedScene" id=120]
+[ext_resource path="res://map/Map135.tscn" type="PackedScene" id=121]
+[ext_resource path="res://map/Map132.tscn" type="PackedScene" id=122]
+[ext_resource path="res://map/Map133.tscn" type="PackedScene" id=123]
+[ext_resource path="res://map/Map136.tscn" type="PackedScene" id=124]
+[ext_resource path="res://map/Map137.tscn" type="PackedScene" id=125]
+[ext_resource path="res://map/Map145.tscn" type="PackedScene" id=126]
+[ext_resource path="res://map/Map144.tscn" type="PackedScene" id=127]
+[ext_resource path="res://map/Map143.tscn" type="PackedScene" id=128]
+[ext_resource path="res://map/Map146.tscn" type="PackedScene" id=129]
+[ext_resource path="res://map/Map140.tscn" type="PackedScene" id=130]
+[ext_resource path="res://map/Map141.tscn" type="PackedScene" id=131]
+[ext_resource path="res://map/Map142.tscn" type="PackedScene" id=132]
+[ext_resource path="res://map/Map150.tscn" type="PackedScene" id=133]
+[ext_resource path="res://map/Map151.tscn" type="PackedScene" id=134]
+[ext_resource path="res://map/Map147.tscn" type="PackedScene" id=135]
+[ext_resource path="res://map/Map153.tscn" type="PackedScene" id=136]
+[ext_resource path="res://map/Map152.tscn" type="PackedScene" id=137]
+[ext_resource path="res://map/Map155.tscn" type="PackedScene" id=138]
+[ext_resource path="res://map/Map154.tscn" type="PackedScene" id=139]
+[ext_resource path="res://map/Map156.tscn" type="PackedScene" id=140]
+[ext_resource path="res://map/Map163.tscn" type="PackedScene" id=141]
+[ext_resource path="res://map/Map162.tscn" type="PackedScene" id=142]
+[ext_resource path="res://map/Map157.tscn" type="PackedScene" id=143]
+[ext_resource path="res://map/Map160.tscn" type="PackedScene" id=144]
+[ext_resource path="res://map/Map161.tscn" type="PackedScene" id=145]
 
 [node name="MapDesigner" type="Node2D"]
 
 [node name="Map" type="Sprite" parent="."]
+visible = false
 position = Vector2( 8696.5, 2394.08 )
 scale = Vector2( 27.2972, 16.7937 )
 z_index = -4096
@@ -661,1922 +149,274 @@ texture = ExtResource( 8 )
 
 [node name="ActualMap" type="Node2D" parent="."]
 
-[node name="Map00" type="Node2D" parent="ActualMap"]
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map00"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map00"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map10" type="Node2D" parent="ActualMap"]
-position = Vector2( 1024, 0 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map10"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map10"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map11" type="Node2D" parent="ActualMap"]
-position = Vector2( 1024, 600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map11"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map11"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map12" type="Node2D" parent="ActualMap"]
-position = Vector2( 1024, 1200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map12"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map12"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map13" type="Node2D" parent="ActualMap"]
-position = Vector2( 1024, 1800 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map13"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map13"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map14" type="Node2D" parent="ActualMap"]
-position = Vector2( 1024, 2400 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map14"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map14"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map15" type="Node2D" parent="ActualMap"]
-position = Vector2( 1024, 3200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map15"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map15"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map16" type="Node2D" parent="ActualMap"]
-position = Vector2( 1024, 3800 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map16"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map16"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map17" type="Node2D" parent="ActualMap"]
-position = Vector2( 1024, 4200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map17"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map17"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map20" type="Node2D" parent="ActualMap"]
-position = Vector2( 2048, 0 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map20"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map20"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map21" type="Node2D" parent="ActualMap"]
-position = Vector2( 2048, 600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map21"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map21"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map22" type="Node2D" parent="ActualMap"]
-position = Vector2( 2048, 1200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map22"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map22"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map23" type="Node2D" parent="ActualMap"]
-position = Vector2( 2048, 1800 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map23"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map23"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map24" type="Node2D" parent="ActualMap"]
-position = Vector2( 2048, 2400 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map24"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map24"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map25" type="Node2D" parent="ActualMap"]
-position = Vector2( 2048, 3200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map25"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map25"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map26" type="Node2D" parent="ActualMap"]
-position = Vector2( 2048, 3800 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map26"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map26"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map27" type="Node2D" parent="ActualMap"]
-position = Vector2( 2048, 4200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map27"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map27"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map30" type="Node2D" parent="ActualMap"]
-position = Vector2( 3072, 0 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map30"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map30"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map31" type="Node2D" parent="ActualMap"]
-position = Vector2( 3072, 600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map31"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map31"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map32" type="Node2D" parent="ActualMap"]
-position = Vector2( 3072, 1200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map32"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map32"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map33" type="Node2D" parent="ActualMap"]
-position = Vector2( 3072, 1800 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map33"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map33"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map34" type="Node2D" parent="ActualMap"]
-position = Vector2( 3072, 2400 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map34"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map34"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map35" type="Node2D" parent="ActualMap"]
-position = Vector2( 3072, 3000 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map35"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map35"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map36" type="Node2D" parent="ActualMap"]
-position = Vector2( 3072, 3600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map36"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map36"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map37" type="Node2D" parent="ActualMap"]
-position = Vector2( 3072, 4200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map37"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map37"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map40" type="Node2D" parent="ActualMap"]
-position = Vector2( 4096, 0 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map40"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map40"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map41" type="Node2D" parent="ActualMap"]
-position = Vector2( 4096, 600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map41"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map41"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map42" type="Node2D" parent="ActualMap"]
-position = Vector2( 4096, 1200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map42"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map42"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map43" type="Node2D" parent="ActualMap"]
-position = Vector2( 4096, 1800 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map43"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map43"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map44" type="Node2D" parent="ActualMap"]
-position = Vector2( 4096, 2400 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map44"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map44"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map45" type="Node2D" parent="ActualMap"]
-position = Vector2( 4096, 3000 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map45"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 15, 6, 0, 65550, 6, 0, 65551, 6, 0, 131085, 6, 0, 131086, 6, 0, 131087, 6, 0, 196620, 6, 0, 196621, 6, 0, 196622, 6, 0, 196623, 6, 0, 262156, 6, 0, 262157, 6, 0, 262158, 6, 0, 262159, 6, 0, 327692, 6, 0, 327693, 6, 0, 327694, 6, 0, 327695, 6, 0, 393228, 6, 0, 393229, 6, 0, 393230, 6, 0, 393231, 6, 0, 458764, 6, 0, 458765, 6, 0, 458766, 6, 0, 458767, 6, 0, 524301, 6, 0, 524302, 6, 0, 524303, 6, 0, 589839, 6, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map45"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map46" type="Node2D" parent="ActualMap"]
-position = Vector2( 4096, 3600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map46"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map46"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map47" type="Node2D" parent="ActualMap"]
-position = Vector2( 4096, 4200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map47"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map47"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map50" type="Node2D" parent="ActualMap"]
-position = Vector2( 5120, 0 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map50"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map50"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map51" type="Node2D" parent="ActualMap"]
-position = Vector2( 5120, 600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map51"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map51"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map52" type="Node2D" parent="ActualMap"]
-position = Vector2( 5120, 1200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map52"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map52"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map53" type="Node2D" parent="ActualMap"]
-position = Vector2( 5120, 1800 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map53"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map53"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map54" type="Node2D" parent="ActualMap"]
-position = Vector2( 5120, 2400 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map54"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 393219, 6, 0, 393220, 6, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 458753, 6, 0, 458754, 6, 0, 458755, 6, 0, 458756, 6, 0, 458757, 6, 0, 458758, 6, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 524288, 6, 0, 524289, 6, 0, 524290, 6, 0, 524291, 6, 0, 524292, 6, 0, 524293, 6, 0, 524294, 6, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589824, 6, 0, 589825, 6, 0, 589826, 6, 0, 589827, 6, 0, 589828, 6, 0, 589829, 6, 0, 589830, 6, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map54"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 458752, 0, 0, 458753, 0, 0, 458759, 0, 0, 458760, 0, 0, 524288, 0, 0, 524295, 0, 0, 524296, 0, 0, 589831, 0, 0, 589832, 0, 0 )
-
-[node name="Map55" type="Node2D" parent="ActualMap"]
-position = Vector2( 5120, 3000 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map55"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 6, 0, 1, 6, 0, 2, 6, 0, 3, 6, 0, 4, 6, 0, 5, 6, 0, 6, 6, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 6, 0, 65537, 6, 0, 65538, 6, 0, 65539, 6, 0, 65540, 6, 0, 65541, 6, 0, 65542, 6, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 6, 0, 131073, 6, 0, 131074, 6, 0, 131075, 6, 0, 131076, 6, 0, 131077, 6, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 6, 0, 196609, 6, 0, 196610, 6, 0, 196611, 6, 0, 196612, 6, 0, 196613, 6, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 6, 0, 262145, 6, 0, 262146, 6, 0, 262147, 6, 0, 262148, 6, 0, 262149, 6, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 6, 0, 327681, 6, 0, 327682, 6, 0, 327683, 6, 0, 327684, 6, 0, 327685, 6, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 6, 0, 393217, 6, 0, 393218, 6, 0, 393219, 6, 0, 393220, 6, 0, 393221, 6, 0, 393222, 6, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 6, 0, 458753, 6, 0, 458754, 6, 0, 458755, 6, 0, 458756, 6, 0, 458757, 6, 0, 458758, 6, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524288, 6, 0, 524289, 6, 0, 524290, 6, 0, 524291, 6, 0, 524292, 6, 0, 524293, 6, 0, 524294, 6, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589824, 7, 0, 589825, 7, 0, 589826, 7, 0, 589827, 7, 0, 589828, 7, 0, 589829, 7, 0, 589830, 7, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map55"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-tile_data = PoolIntArray( 7, 0, 0, 8, 0, 0, 65543, 0, 0, 65544, 0, 0, 131079, 0, 0, 131080, 0, 0, 196615, 0, 0, 196616, 0, 0, 262151, 0, 0, 262152, 0, 0, 327687, 0, 0, 327688, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0 )
-
-[node name="Map56" type="Node2D" parent="ActualMap"]
-position = Vector2( 5120, 3600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map56"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( -589818, 7, 0, -524282, 7, 0, -65536, 6, 0, -65535, 6, 0, -65534, 6, 0, -65533, 6, 0, -65532, 6, 0, -65531, 6, 0, -65530, 6, 0, -65524, 0, 0, -65523, 0, 0, -65522, 0, 0, -65521, 0, 0, 0, 7, 0, 1, 7, 0, 2, 7, 0, 3, 7, 0, 4, 7, 0, 5, 7, 0, 6, 7, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131087, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map56"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-tile_data = PoolIntArray( -524282, 0, 0, -458746, 0, 0, -393210, 0, 0, -327674, 0, 0, -262138, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0 )
-
-[node name="Map57" type="Node2D" parent="ActualMap"]
-position = Vector2( 5120, 4200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map57"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map57"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map60" type="Node2D" parent="ActualMap"]
-position = Vector2( 6144, 0 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map60"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map60"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map61" type="Node2D" parent="ActualMap"]
-position = Vector2( 6144, 600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map61"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map61"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map62" type="Node2D" parent="ActualMap"]
-position = Vector2( 6144, 1200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map62"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map62"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0 )
-
-[node name="Map63" type="Node2D" parent="ActualMap"]
-position = Vector2( 6144, 1800 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map63"]
-z_index = -4095
-tile_set = SubResource( 11 )
-format = 1
-tile_data = PoolIntArray( 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map63"]
-z_index = -4096
-tile_set = SubResource( 12 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 262144, 0, 0, 393225, 0, 0 )
-
-[node name="Map64" type="Node2D" parent="ActualMap"]
-position = Vector2( 6144, 2400 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map64"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 327679, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 393215, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 458751, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 524287, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 589823, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 655359, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map64"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map65" type="Node2D" parent="ActualMap"]
-position = Vector2( 6144, 3000 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map65"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, -65523, 0, 0, -65522, 0, 0, -65521, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map65"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map66" type="Node2D" parent="ActualMap"]
-position = Vector2( 6144, 3600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map66"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map66"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map67" type="Node2D" parent="ActualMap"]
-position = Vector2( 6144, 4200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map67"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map67"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map70" type="Node2D" parent="ActualMap"]
-position = Vector2( 7168, 0 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map70"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map70"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map71" type="Node2D" parent="ActualMap"]
-position = Vector2( 7168, 600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map71"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map71"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0 )
-
-[node name="Map72" type="Node2D" parent="ActualMap"]
-position = Vector2( 7168, 1200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map72"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map72"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 524288, 0, 0 )
-
-[node name="Map73" type="Node2D" parent="ActualMap"]
-position = Vector2( 7168, 1800 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map73"]
-z_index = -4095
-tile_set = SubResource( 3 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map73"]
-z_index = -4096
-tile_set = SubResource( 4 )
-format = 1
-
-[node name="Map74" type="Node2D" parent="ActualMap"]
-position = Vector2( 7168, 2400 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map74"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map74"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map75" type="Node2D" parent="ActualMap"]
-position = Vector2( 7168, 3000 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map75"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65522, 0, 0, -65521, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map75"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map76" type="Node2D" parent="ActualMap"]
-position = Vector2( 7168, 3600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map76"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map76"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map77" type="Node2D" parent="ActualMap"]
-position = Vector2( 7168, 4200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map77"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map77"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map80" type="Node2D" parent="ActualMap"]
-position = Vector2( 8192, 0 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map80"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map80"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map81" type="Node2D" parent="ActualMap"]
-position = Vector2( 8192, 600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map81"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map81"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map82" type="Node2D" parent="ActualMap"]
-position = Vector2( 8192, 1200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map82"]
-z_index = -4095
-tile_set = SubResource( 5 )
-format = 1
-tile_data = PoolIntArray( 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map82"]
-z_index = -4096
-tile_set = SubResource( 6 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0 )
-
-[node name="Map83" type="Node2D" parent="ActualMap"]
-position = Vector2( 8192, 1800 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map83"]
-z_index = -4095
-tile_set = SubResource( 7 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 327679, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map83"]
-z_index = -4096
-tile_set = SubResource( 8 )
-format = 1
-
-[node name="Map84" type="Node2D" parent="ActualMap"]
-position = Vector2( 8192, 2400 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map84"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map84"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map85" type="Node2D" parent="ActualMap"]
-position = Vector2( 8192, 3000 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map85"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 589823, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map85"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map86" type="Node2D" parent="ActualMap"]
-position = Vector2( 8192, 3600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map86"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map86"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map87" type="Node2D" parent="ActualMap"]
-position = Vector2( 8192, 4200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map87"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map87"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map90" type="Node2D" parent="ActualMap"]
-position = Vector2( 9216, 0 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map90"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map90"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map91" type="Node2D" parent="ActualMap"]
-position = Vector2( 9216, 600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map91"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map91"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map92" type="Node2D" parent="ActualMap"]
-position = Vector2( 9216, 1200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map92"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map92"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0 )
-
-[node name="Map93" type="Node2D" parent="ActualMap"]
-position = Vector2( 9216, 1800 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map93"]
-z_index = -4095
-tile_set = SubResource( 9 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map93"]
-z_index = -4096
-tile_set = SubResource( 10 )
-format = 1
-
-[node name="Map94" type="Node2D" parent="ActualMap"]
-position = Vector2( 9216, 2400 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map94"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map94"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map95" type="Node2D" parent="ActualMap"]
-position = Vector2( 9216, 3000 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map95"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 524287, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 589823, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map95"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map96" type="Node2D" parent="ActualMap"]
-position = Vector2( 9216, 3600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map96"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map96"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map97" type="Node2D" parent="ActualMap"]
-position = Vector2( 9216, 4200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map97"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map97"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map100" type="Node2D" parent="ActualMap"]
-position = Vector2( 10240, 0 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map100"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map100"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map101" type="Node2D" parent="ActualMap"]
-position = Vector2( 10240, 600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map101"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map101"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map102" type="Node2D" parent="ActualMap"]
-position = Vector2( 10240, 1200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map102"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map102"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map103" type="Node2D" parent="ActualMap"]
-position = Vector2( 10240, 1800 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map103"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map103"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-tile_data = PoolIntArray( 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65550, 0, 0, 65551, 0, 0 )
-
-[node name="Map104" type="Node2D" parent="ActualMap"]
-position = Vector2( 10240, 2400 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map104"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 327679, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 393215, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map104"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-tile_data = PoolIntArray( 393230, 0, 0, 393231, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0 )
-
-[node name="Map105" type="Node2D" parent="ActualMap"]
-position = Vector2( 10240, 3000 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map105"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 524287, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 589823, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map105"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-tile_data = PoolIntArray( 10, 0, 0, 11, 0, 0, 65545, 0, 0, 65546, 0, 0, 131081, 0, 0, 131082, 0, 0, 196616, 0, 0, 196617, 0, 0, 262151, 0, 0, 262152, 0, 0, 327687, 0, 0, 327688, 0, 0, 393222, 0, 0, 393223, 0, 0, 458758, 0, 0, 458759, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0 )
-
-[node name="Map106" type="Node2D" parent="ActualMap"]
-position = Vector2( 10240, 3600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map106"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, -65523, 0, 0, -65522, 0, 0, -65521, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 327679, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 393215, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 458751, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 524287, 0, 0, 458752, 0, 0, 458753, 0, 0, 589823, 0, 0, 524288, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map106"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-tile_data = PoolIntArray( -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0 )
-
-[node name="Map107" type="Node2D" parent="ActualMap"]
-position = Vector2( 10240, 4200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map107"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map107"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map110" type="Node2D" parent="ActualMap"]
-position = Vector2( 11264, 0 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map110"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map110"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map111" type="Node2D" parent="ActualMap"]
-position = Vector2( 11264, 600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map111"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map111"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map112" type="Node2D" parent="ActualMap"]
-position = Vector2( 11264, 1200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map112"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map112"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map113" type="Node2D" parent="ActualMap"]
-position = Vector2( 11264, 1800 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map113"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map113"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0 )
-
-[node name="Map114" type="Node2D" parent="ActualMap"]
-position = Vector2( 11264, 2400 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map114"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 327680, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map114"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-tile_data = PoolIntArray( 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458767, 0, 0 )
-
-[node name="Map115" type="Node2D" parent="ActualMap"]
-position = Vector2( 11264, 3000 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map115"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, -65523, 0, 0, -65522, 0, 0, -65521, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327693, 4, 0, 327694, 4, 0, 327695, 4, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393228, 4, 0, 393229, 4, 0, 393230, 4, 0, 393231, 4, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458762, 4, 0, 458763, 4, 0, 458764, 4, 0, 458765, 4, 0, 458766, 4, 0, 458767, 4, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524297, 4, 0, 524298, 4, 0, 524299, 4, 0, 524300, 4, 0, 524301, 4, 0, 524302, 4, 0, 524303, 4, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map115"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-tile_data = PoolIntArray( 196622, 0, 0, 196623, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 458760, 0, 0, 458761, 0, 0, 524295, 0, 0, 524296, 0, 0 )
-
-[node name="Map116" type="Node2D" parent="ActualMap"]
-position = Vector2( 11264, 3600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map116"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65527, 4, 0, -65526, 4, 0, -65525, 4, 0, -65524, 4, 0, -65523, 4, 0, -65522, 4, 0, -65521, 4, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 8, 4, 0, 9, 4, 0, 10, 4, 0, 11, 4, 0, 12, 4, 0, 13, 4, 0, 14, 4, 0, 15, 4, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65543, 4, 0, 65544, 4, 0, 65545, 4, 0, 65546, 4, 0, 65547, 4, 0, 65548, 4, 0, 65549, 4, 0, 65550, 4, 0, 65551, 4, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131078, 4, 0, 131079, 4, 0, 131080, 4, 0, 131081, 4, 0, 131082, 4, 0, 131083, 4, 0, 131084, 4, 0, 131085, 4, 0, 131086, 4, 0, 131087, 4, 0, 196608, 0, 0, 196613, 4, 0, 196614, 4, 0, 196615, 4, 0, 196616, 4, 0, 196617, 4, 0, 196618, 4, 0, 196619, 4, 0, 196620, 4, 0, 196621, 4, 0, 196622, 4, 0, 196623, 4, 0, 262149, 4, 0, 262150, 4, 0, 262151, 4, 0, 262152, 4, 0, 262153, 4, 0, 262154, 4, 0, 262155, 4, 0, 262156, 4, 0, 262157, 4, 0, 262158, 4, 0, 262159, 4, 0, 327684, 4, 0, 327685, 4, 0, 327686, 4, 0, 327687, 4, 0, 327688, 4, 0, 327689, 4, 0, 327690, 4, 0, 327691, 4, 0, 327692, 4, 0, 327693, 4, 0, 327694, 4, 0, 327695, 4, 0, 393220, 4, 0, 393221, 4, 0, 393222, 4, 0, 393223, 4, 0, 393224, 4, 0, 393225, 4, 0, 393226, 4, 0, 393227, 4, 0, 393228, 4, 0, 393229, 4, 0, 393230, 4, 0, 393231, 4, 0, 458756, 4, 0, 458757, 4, 0, 458758, 4, 0, 458759, 4, 0, 458760, 4, 0, 458761, 4, 0, 458762, 4, 0, 458763, 4, 0, 458764, 4, 0, 458765, 4, 0, 458766, 4, 0, 458767, 4, 0, 524292, 4, 0, 524293, 4, 0, 524294, 4, 0, 524295, 4, 0, 524296, 4, 0, 524297, 4, 0, 524298, 4, 0, 524299, 4, 0, 524300, 4, 0, 524301, 4, 0, 524302, 4, 0, 524303, 4, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map116"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-tile_data = PoolIntArray( -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, 6, 0, 0, 7, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0 )
-
-[node name="Map117" type="Node2D" parent="ActualMap"]
-position = Vector2( 11264, 4200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map117"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map117"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map120" type="Node2D" parent="ActualMap"]
-position = Vector2( 12288, 0 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map120"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map120"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map121" type="Node2D" parent="ActualMap"]
-position = Vector2( 12288, 600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map121"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map121"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map122" type="Node2D" parent="ActualMap"]
-position = Vector2( 12288, 1200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map122"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map122"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map123" type="Node2D" parent="ActualMap"]
-position = Vector2( 12288, 1800 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map123"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map123"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map124" type="Node2D" parent="ActualMap"]
-position = Vector2( 12288, 2400 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map124"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map124"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map125" type="Node2D" parent="ActualMap"]
-position = Vector2( 12288, 3000 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map125"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 131072, 0, 0, 327680, 4, 0, 327681, 4, 0, 327682, 4, 0, 327695, 4, 0, 393216, 4, 0, 393217, 4, 0, 393218, 4, 0, 393219, 4, 0, 393220, 4, 0, 393221, 4, 0, 393229, 4, 0, 393230, 4, 0, 393231, 4, 0, 458752, 4, 0, 458753, 4, 0, 458754, 4, 0, 458755, 4, 0, 458756, 4, 0, 458757, 4, 0, 458758, 4, 0, 458759, 4, 0, 458760, 4, 0, 458761, 4, 0, 458762, 4, 0, 458763, 4, 0, 458764, 4, 0, 458765, 4, 0, 458766, 4, 0, 458767, 4, 0, 524288, 4, 0, 524289, 4, 0, 524290, 4, 0, 524291, 4, 0, 524292, 4, 0, 524293, 4, 0, 524294, 4, 0, 524295, 4, 0, 524296, 4, 0, 524297, 4, 0, 524298, 4, 0, 524299, 4, 0, 524300, 4, 0, 524301, 4, 0, 524302, 4, 0, 524303, 4, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map125"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-tile_data = PoolIntArray( 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0 )
-
-[node name="Map126" type="Node2D" parent="ActualMap"]
-position = Vector2( 12288, 3600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map126"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map126"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map127" type="Node2D" parent="ActualMap"]
-position = Vector2( 12288, 4200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map127"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map127"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map130" type="Node2D" parent="ActualMap"]
-position = Vector2( 13312, 0 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map130"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map130"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map131" type="Node2D" parent="ActualMap"]
-position = Vector2( 13312, 600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map131"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map131"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map132" type="Node2D" parent="ActualMap"]
-position = Vector2( 13312, 1200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map132"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map132"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map133" type="Node2D" parent="ActualMap"]
-position = Vector2( 13312, 1800 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map133"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map133"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map134" type="Node2D" parent="ActualMap"]
-position = Vector2( 13312, 2400 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map134"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map134"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map135" type="Node2D" parent="ActualMap"]
-position = Vector2( 13312, 3000 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map135"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map135"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map136" type="Node2D" parent="ActualMap"]
-position = Vector2( 13312, 3600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map136"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map136"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map137" type="Node2D" parent="ActualMap"]
-position = Vector2( 13312, 4200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map137"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map137"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map140" type="Node2D" parent="ActualMap"]
-position = Vector2( 14336, 0 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map140"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map140"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map141" type="Node2D" parent="ActualMap"]
-position = Vector2( 14336, 600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map141"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map141"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-tile_data = PoolIntArray( 1245071, 0, 0 )
-
-[node name="Map142" type="Node2D" parent="ActualMap"]
-position = Vector2( 14336, 1200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map142"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map142"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map143" type="Node2D" parent="ActualMap"]
-position = Vector2( 14336, 1800 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map143"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map143"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map144" type="Node2D" parent="ActualMap"]
-position = Vector2( 14336, 2400 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map144"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map144"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map145" type="Node2D" parent="ActualMap"]
-position = Vector2( 14336, 3000 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map145"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map145"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map146" type="Node2D" parent="ActualMap"]
-position = Vector2( 14336, 3600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map146"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map146"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map147" type="Node2D" parent="ActualMap"]
-position = Vector2( 14336, 4200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map147"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map147"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map150" type="Node2D" parent="ActualMap"]
-position = Vector2( 15360, 0 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map150"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map150"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map151" type="Node2D" parent="ActualMap"]
-position = Vector2( 15360, 600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map151"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map151"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map152" type="Node2D" parent="ActualMap"]
-position = Vector2( 15360, 1200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map152"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map152"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map153" type="Node2D" parent="ActualMap"]
-position = Vector2( 15360, 1800 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map153"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map153"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map154" type="Node2D" parent="ActualMap"]
-position = Vector2( 15360, 2400 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map154"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map154"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map155" type="Node2D" parent="ActualMap"]
-position = Vector2( 15360, 3000 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map155"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map155"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map156" type="Node2D" parent="ActualMap"]
-position = Vector2( 15360, 3600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map156"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map156"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map157" type="Node2D" parent="ActualMap"]
-position = Vector2( 15360, 4200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map157"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map157"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map160" type="Node2D" parent="ActualMap"]
-position = Vector2( 16384, 0 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map160"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map160"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map161" type="Node2D" parent="ActualMap"]
-position = Vector2( 16384, 600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map161"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map161"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map162" type="Node2D" parent="ActualMap"]
-position = Vector2( 16384, 1200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map162"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map162"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map163" type="Node2D" parent="ActualMap"]
-position = Vector2( 16384, 1800 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map163"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map163"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map164" type="Node2D" parent="ActualMap"]
-position = Vector2( 16384, 2400 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map164"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map164"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map165" type="Node2D" parent="ActualMap"]
-position = Vector2( 16384, 3000 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map165"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map165"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map166" type="Node2D" parent="ActualMap"]
-position = Vector2( 16384, 3600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map166"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map166"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map167" type="Node2D" parent="ActualMap"]
-position = Vector2( 16384, 4200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map167"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map167"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map01" type="Node2D" parent="ActualMap"]
-position = Vector2( 0, 600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map01"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map01"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map02" type="Node2D" parent="ActualMap"]
-position = Vector2( 0, 1200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map02"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map02"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map03" type="Node2D" parent="ActualMap"]
-position = Vector2( 0, 1800 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map03"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map03"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map04" type="Node2D" parent="ActualMap"]
-position = Vector2( 0, 2400 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map04"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map04"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map05" type="Node2D" parent="ActualMap"]
-position = Vector2( 0, 3000 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map05"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map05"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map06" type="Node2D" parent="ActualMap"]
-position = Vector2( 0, 3600 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map06"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map06"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
-
-[node name="Map07" type="Node2D" parent="ActualMap"]
-position = Vector2( 0, 4200 )
-
-[node name="LayerTop" type="TileMap" parent="ActualMap/Map07"]
-z_index = -4095
-tile_set = SubResource( 1 )
-format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 524288, 0, 0, 524303, 0, 0 )
-
-[node name="LayerBottom" type="TileMap" parent="ActualMap/Map07"]
-z_index = -4096
-tile_set = SubResource( 2 )
-format = 1
+[node name="Map00" parent="ActualMap" instance=ExtResource( 16 )]
+
+[node name="Map10" parent="ActualMap" instance=ExtResource( 21 )]
+
+[node name="Map11" parent="ActualMap" instance=ExtResource( 18 )]
+
+[node name="Map12" parent="ActualMap" instance=ExtResource( 20 )]
+
+[node name="Map13" parent="ActualMap" instance=ExtResource( 17 )]
+
+[node name="Map14" parent="ActualMap" instance=ExtResource( 19 )]
+
+[node name="Map15" parent="ActualMap" instance=ExtResource( 22 )]
+
+[node name="Map16" parent="ActualMap" instance=ExtResource( 24 )]
+
+[node name="Map17" parent="ActualMap" instance=ExtResource( 23 )]
+
+[node name="Map20" parent="ActualMap" instance=ExtResource( 25 )]
+
+[node name="Map21" parent="ActualMap" instance=ExtResource( 26 )]
+
+[node name="Map22" parent="ActualMap" instance=ExtResource( 27 )]
+
+[node name="Map23" parent="ActualMap" instance=ExtResource( 32 )]
+
+[node name="Map24" parent="ActualMap" instance=ExtResource( 31 )]
+
+[node name="Map25" parent="ActualMap" instance=ExtResource( 28 )]
+
+[node name="Map26" parent="ActualMap" instance=ExtResource( 29 )]
+
+[node name="Map27" parent="ActualMap" instance=ExtResource( 30 )]
+
+[node name="Map30" parent="ActualMap" instance=ExtResource( 34 )]
+
+[node name="Map31" parent="ActualMap" instance=ExtResource( 37 )]
+
+[node name="Map32" parent="ActualMap" instance=ExtResource( 35 )]
+
+[node name="Map33" parent="ActualMap" instance=ExtResource( 36 )]
+
+[node name="Map34" parent="ActualMap" instance=ExtResource( 38 )]
+
+[node name="Map35" parent="ActualMap" instance=ExtResource( 40 )]
+
+[node name="Map36" parent="ActualMap" instance=ExtResource( 43 )]
+
+[node name="Map37" parent="ActualMap" instance=ExtResource( 39 )]
+
+[node name="Map40" parent="ActualMap" instance=ExtResource( 42 )]
+
+[node name="Map41" parent="ActualMap" instance=ExtResource( 46 )]
+
+[node name="Map42" parent="ActualMap" instance=ExtResource( 44 )]
+
+[node name="Map43" parent="ActualMap" instance=ExtResource( 41 )]
+
+[node name="Map44" parent="ActualMap" instance=ExtResource( 45 )]
+
+[node name="Map45" parent="ActualMap" instance=ExtResource( 49 )]
+
+[node name="Map46" parent="ActualMap" instance=ExtResource( 47 )]
+
+[node name="Map47" parent="ActualMap" instance=ExtResource( 48 )]
+
+[node name="Map50" parent="ActualMap" instance=ExtResource( 33 )]
+
+[node name="Map51" parent="ActualMap" instance=ExtResource( 52 )]
+
+[node name="Map52" parent="ActualMap" instance=ExtResource( 55 )]
+
+[node name="Map53" parent="ActualMap" instance=ExtResource( 54 )]
+
+[node name="Map54" parent="ActualMap" instance=ExtResource( 53 )]
+
+[node name="Map55" parent="ActualMap" instance=ExtResource( 50 )]
+
+[node name="Map56" parent="ActualMap" instance=ExtResource( 51 )]
+
+[node name="Map57" parent="ActualMap" instance=ExtResource( 90 )]
+
+[node name="Map60" parent="ActualMap" instance=ExtResource( 91 )]
+
+[node name="Map61" parent="ActualMap" instance=ExtResource( 88 )]
+
+[node name="Map62" parent="ActualMap" instance=ExtResource( 89 )]
+
+[node name="Map63" parent="ActualMap" instance=ExtResource( 58 )]
+
+[node name="Map64" parent="ActualMap" instance=ExtResource( 84 )]
+
+[node name="Map65" parent="ActualMap" instance=ExtResource( 83 )]
+
+[node name="Map66" parent="ActualMap" instance=ExtResource( 80 )]
+
+[node name="Map67" parent="ActualMap" instance=ExtResource( 66 )]
+
+[node name="Map70" parent="ActualMap" instance=ExtResource( 69 )]
+
+[node name="Map71" parent="ActualMap" instance=ExtResource( 60 )]
+
+[node name="Map72" parent="ActualMap" instance=ExtResource( 77 )]
+
+[node name="Map73" parent="ActualMap" instance=ExtResource( 14 )]
+
+[node name="Map74" parent="ActualMap" instance=ExtResource( 68 )]
+
+[node name="Map75" parent="ActualMap" instance=ExtResource( 78 )]
+
+[node name="Map76" parent="ActualMap" instance=ExtResource( 87 )]
+
+[node name="Map77" parent="ActualMap" instance=ExtResource( 57 )]
+
+[node name="Map80" parent="ActualMap" instance=ExtResource( 82 )]
+
+[node name="Map81" parent="ActualMap" instance=ExtResource( 59 )]
+
+[node name="Map82" parent="ActualMap" instance=ExtResource( 15 )]
+
+[node name="Map83" parent="ActualMap" instance=ExtResource( 13 )]
+
+[node name="Map84" parent="ActualMap" instance=ExtResource( 79 )]
+
+[node name="Map85" parent="ActualMap" instance=ExtResource( 56 )]
+
+[node name="Map86" parent="ActualMap" instance=ExtResource( 75 )]
+
+[node name="Map87" parent="ActualMap" instance=ExtResource( 71 )]
+
+[node name="Map90" parent="ActualMap" instance=ExtResource( 67 )]
+
+[node name="Map91" parent="ActualMap" instance=ExtResource( 72 )]
+
+[node name="Map92" parent="ActualMap" instance=ExtResource( 65 )]
+
+[node name="Map93" parent="ActualMap" instance=ExtResource( 85 )]
+
+[node name="Map94" parent="ActualMap" instance=ExtResource( 61 )]
+
+[node name="Map95" parent="ActualMap" instance=ExtResource( 64 )]
+
+[node name="Map96" parent="ActualMap" instance=ExtResource( 73 )]
+
+[node name="Map97" parent="ActualMap" instance=ExtResource( 76 )]
+
+[node name="Map100" parent="ActualMap" instance=ExtResource( 74 )]
+
+[node name="Map101" parent="ActualMap" instance=ExtResource( 81 )]
+
+[node name="Map102" parent="ActualMap" instance=ExtResource( 63 )]
+
+[node name="Map103" parent="ActualMap" instance=ExtResource( 86 )]
+
+[node name="Map104" parent="ActualMap" instance=ExtResource( 70 )]
+
+[node name="Map105" parent="ActualMap" instance=ExtResource( 62 )]
+
+[node name="Map106" parent="ActualMap" instance=ExtResource( 105 )]
+
+[node name="Map107" parent="ActualMap" instance=ExtResource( 101 )]
+
+[node name="Map110" parent="ActualMap" instance=ExtResource( 92 )]
+
+[node name="Map111" parent="ActualMap" instance=ExtResource( 98 )]
+
+[node name="Map112" parent="ActualMap" instance=ExtResource( 93 )]
+
+[node name="Map113" parent="ActualMap" instance=ExtResource( 94 )]
+
+[node name="Map114" parent="ActualMap" instance=ExtResource( 97 )]
+
+[node name="Map115" parent="ActualMap" instance=ExtResource( 99 )]
+
+[node name="Map116" parent="ActualMap" instance=ExtResource( 95 )]
+
+[node name="Map117" parent="ActualMap" instance=ExtResource( 96 )]
+
+[node name="Map120" parent="ActualMap" instance=ExtResource( 102 )]
+
+[node name="Map121" parent="ActualMap" instance=ExtResource( 100 )]
+
+[node name="Map122" parent="ActualMap" instance=ExtResource( 103 )]
+
+[node name="Map123" parent="ActualMap" instance=ExtResource( 104 )]
+
+[node name="Map124" parent="ActualMap" instance=ExtResource( 106 )]
+
+[node name="Map125" parent="ActualMap" instance=ExtResource( 107 )]
+
+[node name="Map126" parent="ActualMap" instance=ExtResource( 108 )]
+
+[node name="Map127" parent="ActualMap" instance=ExtResource( 109 )]
+
+[node name="Map130" parent="ActualMap" instance=ExtResource( 110 )]
+
+[node name="Map131" parent="ActualMap" instance=ExtResource( 119 )]
+
+[node name="Map132" parent="ActualMap" instance=ExtResource( 122 )]
+
+[node name="Map133" parent="ActualMap" instance=ExtResource( 123 )]
+
+[node name="Map134" parent="ActualMap" instance=ExtResource( 120 )]
+
+[node name="Map135" parent="ActualMap" instance=ExtResource( 121 )]
+
+[node name="Map136" parent="ActualMap" instance=ExtResource( 124 )]
+
+[node name="Map137" parent="ActualMap" instance=ExtResource( 125 )]
+
+[node name="Map140" parent="ActualMap" instance=ExtResource( 130 )]
+
+[node name="Map141" parent="ActualMap" instance=ExtResource( 131 )]
+
+[node name="Map142" parent="ActualMap" instance=ExtResource( 132 )]
+
+[node name="Map143" parent="ActualMap" instance=ExtResource( 128 )]
+
+[node name="Map144" parent="ActualMap" instance=ExtResource( 127 )]
+
+[node name="Map145" parent="ActualMap" instance=ExtResource( 126 )]
+
+[node name="Map146" parent="ActualMap" instance=ExtResource( 129 )]
+
+[node name="Map147" parent="ActualMap" instance=ExtResource( 135 )]
+
+[node name="Map150" parent="ActualMap" instance=ExtResource( 133 )]
+
+[node name="Map151" parent="ActualMap" instance=ExtResource( 134 )]
+
+[node name="Map152" parent="ActualMap" instance=ExtResource( 137 )]
+
+[node name="Map153" parent="ActualMap" instance=ExtResource( 136 )]
+
+[node name="Map154" parent="ActualMap" instance=ExtResource( 139 )]
+
+[node name="Map155" parent="ActualMap" instance=ExtResource( 138 )]
+
+[node name="Map156" parent="ActualMap" instance=ExtResource( 140 )]
+
+[node name="Map157" parent="ActualMap" instance=ExtResource( 143 )]
+
+[node name="Map160" parent="ActualMap" instance=ExtResource( 144 )]
+
+[node name="Map161" parent="ActualMap" instance=ExtResource( 145 )]
+
+[node name="Map162" parent="ActualMap" instance=ExtResource( 142 )]
+
+[node name="Map163" parent="ActualMap" instance=ExtResource( 141 )]
+
+[node name="Map164" parent="ActualMap" instance=ExtResource( 1 )]
+
+[node name="Map165" parent="ActualMap" instance=ExtResource( 2 )]
+
+[node name="Map166" parent="ActualMap" instance=ExtResource( 3 )]
+
+[node name="Map167" parent="ActualMap" instance=ExtResource( 118 )]
+
+[node name="Map01" parent="ActualMap" instance=ExtResource( 114 )]
+
+[node name="Map02" parent="ActualMap" instance=ExtResource( 111 )]
+
+[node name="Map03" parent="ActualMap" instance=ExtResource( 112 )]
+
+[node name="Map04" parent="ActualMap" instance=ExtResource( 113 )]
+
+[node name="Map05" parent="ActualMap" instance=ExtResource( 116 )]
+
+[node name="Map06" parent="ActualMap" instance=ExtResource( 115 )]
+
+[node name="Map07" parent="ActualMap" instance=ExtResource( 117 )]
