@@ -38,3 +38,4 @@ func LoadSceneFromPosition():
 	add_child(s)
 	s.position = Vector2(0, 0)
 	$lbl_coordinates.text = "X:" + str(Global.GLOBAL_POS.x) + " Y:" + str(Global.GLOBAL_POS.y)
+	$lbl_coordinates2.text = $lbl_coordinates.text

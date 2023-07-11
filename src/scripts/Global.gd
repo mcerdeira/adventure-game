@@ -1,7 +1,26 @@
 extends Node
 
 var GLOBAL_POS = Vector2()
-var GLOBAL_VISITED = [[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false]]
+var GLOBAL_VISITED = [
+[false, false, false, false, false, false, false, false, false],
+[false, false, false, false, false, false, false, false, false],
+[false, false, false, false, false, false, false, false, false],
+[false, false, false, false, false, false, false, false, false],
+[false, false, false, false, false, false, false, false, false],
+[false, false, false, false, false, false, false, false, false],
+[false, false, false, false, false, false, false, false, false],
+[false, false, false, false, false, false, false, false, false],
+[false, false, false, false, false, false, false, false, false],
+[false, false, false, false, false, false, false, false, false],
+[false, false, false, false, false, false, false, false, false],
+[false, false, false, false, false, false, false, false, false],
+[false, false, false, false, false, false, false, false, false],
+[false, false, false, false, false, false, false, false, false],
+[false, false, false, false, false, false, false, false, false],
+[false, false, false, false, false, false, false, false, false],
+[false, false, false, false, false, false, false, false, false],
+[false, false, false, false, false, false, false, false, false],
+]
 var PLAYER_POS = null
 var PLAYER_FACE = null
 var PLAYER_BACK = null
@@ -16,8 +35,8 @@ func normal_cursor():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func boot_strap_game():
-	GLOBAL_POS.x = 8
-	GLOBAL_POS.y = 3
+	GLOBAL_POS.x = 14 #8
+	GLOBAL_POS.y = 5 #3
 	custom_cursor()
 	speed = 150.0
 	slow_down = 1

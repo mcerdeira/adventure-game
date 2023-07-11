@@ -177,7 +177,7 @@ position = Vector2( 11264, 0 )
 z_index = -4095
 tile_set = SubResource( 1 )
 format = 1
-tile_data = PoolIntArray( 393216, 8, 0, 458752, 8, 0, 458753, 8, 0, 524288, 8, 0, 524289, 8, 0, 524290, 8, 0, 589824, 8, 0, 589825, 8, 0, 589826, 8, 0 )
+tile_data = PoolIntArray( 327680, 8, 0, 393216, 8, 0, 458752, 8, 0, 458753, 8, 0, 524288, 8, 0, 524289, 8, 0, 524290, 8, 0, 589824, 8, 0, 589825, 8, 0, 589826, 8, 0 )
 
 [node name="LayerBottom" type="TileMap" parent="."]
 z_index = -4096

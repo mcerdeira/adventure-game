@@ -69,6 +69,15 @@ dir = "U"
 position = Vector2( 0, 720 )
 dir = "D"
 
+[node name="lbl_coordinates2" type="Label" parent="."]
+margin_left = 109.0
+margin_top = 3.0
+margin_right = 519.0
+margin_bottom = 43.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "MAP"
+
 [node name="lbl_coordinates" type="Label" parent="."]
 margin_left = 107.0
 margin_top = 2.0
