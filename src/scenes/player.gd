@@ -28,7 +28,7 @@ func _physics_process(delta):
 		base_speed = Global.speed / 1.3
 		
 	if run:
-		base_speed *= 10#2
+		base_speed *= 2.3
 	
 	if left:
 		movement.x = -base_speed / Global.slow_down

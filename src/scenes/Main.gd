@@ -2,7 +2,15 @@ extends Node2D
 
 func _ready():
 	LoadSceneFromPosition()
+	$CanvasLayer/MapDesigner.visible = false
 	
+func _physics_process(delta):
+	var call_map = Input.is_action_just_pressed("call_map")
+	if(call_map):
+		$CanvasLayer/MiniMap.visible = $CanvasLayer/MapDesigner.visible
+		$CanvasLayer/MapDesigner.position_coso()
+		$CanvasLayer/MapDesigner.visible = !$CanvasLayer/MapDesigner.visible
+		
 func change_map(dir):
 	if dir == "L":
 		var view = get_viewport_rect()
