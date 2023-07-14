@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fire_spr_1.png-92554769f5048f8765caf0d3eae96c7c.stex"
+path="res://.import/electric_attack.png-3df9b1644959b3469cadca83b1439ff3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art_vault/images/fire_spr_1.png"
-dest_files=[ "res://.import/fire_spr_1.png-92554769f5048f8765caf0d3eae96c7c.stex" ]
+source_file="res://sprites/electric_attack.png"
+dest_files=[ "res://.import/electric_attack.png-3df9b1644959b3469cadca83b1439ff3.stex" ]
 
 [params]
 
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

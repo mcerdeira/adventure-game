@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://art_vault/images/fire_spr_0.png" type="Texture" id=1]
+[ext_resource path="res://art_vault/images/water_spr_0.png" type="Texture" id=2]
+[ext_resource path="res://art_vault/images/stone_spr_0.png" type="Texture" id=3]
+[ext_resource path="res://art_vault/images/smoke_spr_0.png" type="Texture" id=4]
+[ext_resource path="res://sprites/craftslot.png" type="Texture" id=5]
+[ext_resource path="res://sprites/electric_attack.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "air",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "electricity",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "empty",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "fire",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "rock",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "water",
+"speed": 5.0
+} ]
+
+[node name="Element" type="Node2D"]
+
+[node name="sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "empty"
+
+[node name="slot" type="Sprite" parent="."]
+texture = ExtResource( 5 )

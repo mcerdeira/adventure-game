@@ -1,0 +1,120 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://scenes/CraftSlot.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Element.tscn" type="PackedScene" id=2]
+[ext_resource path="res://art_vault/images/fire_spr_2.png" type="Texture" id=3]
+[ext_resource path="res://art_vault/images/fire_spr_0.png" type="Texture" id=4]
+[ext_resource path="res://art_vault/images/fire_spr_1.png" type="Texture" id=5]
+[ext_resource path="res://art_vault/images/fire_spr_3.png" type="Texture" id=6]
+[ext_resource path="res://art_vault/images/water_spr_0.png" type="Texture" id=7]
+[ext_resource path="res://art_vault/images/smoke_spr_0.png" type="Texture" id=8]
+[ext_resource path="res://art_vault/images/stone_spr_0.png" type="Texture" id=9]
+[ext_resource path="res://sprites/electric_attack.png" type="Texture" id=10]
+[ext_resource path="res://fonts/prstartk.ttf" type="DynamicFontData" id=11]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=6]
+size = 8
+font_data = ExtResource( 11 )
+
+[node name="CraftTable" type="Node2D"]
+
+[node name="CraftSlot1" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8, 8 )
+
+[node name="CraftSlot2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 23, 8 )
+
+[node name="CraftSlot3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 38, 8 )
+
+[node name="CraftSlot4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8, 23 )
+
+[node name="CraftSlot5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 23, 23 )
+
+[node name="CraftSlot6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 38, 23 )
+
+[node name="CraftSlot7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8, 38 )
+
+[node name="CraftSlot8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 23, 38 )
+
+[node name="CraftSlot9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 38, 38 )
+
+[node name="Element" parent="." instance=ExtResource( 2 )]
+position = Vector2( 23, 63 )
+
+[node name="ElementPicker" type="Node2D" parent="."]
+
+[node name="fire" type="AnimatedSprite" parent="ElementPicker"]
+position = Vector2( -32, 143 )
+frames = SubResource( 1 )
+playing = true
+
+[node name="water" type="AnimatedSprite" parent="ElementPicker"]
+position = Vector2( -1, 144 )
+frames = SubResource( 2 )
+
+[node name="air" type="AnimatedSprite" parent="ElementPicker"]
+position = Vector2( 30, 144 )
+frames = SubResource( 3 )
+
+[node name="rock" type="AnimatedSprite" parent="ElementPicker"]
+position = Vector2( 52, 144 )
+frames = SubResource( 4 )
+
+[node name="electricity" type="AnimatedSprite" parent="ElementPicker"]
+position = Vector2( 81, 145 )
+frames = SubResource( 5 )
+
+[node name="lbl_title2" type="Label" parent="."]
+margin_left = -12.0
+margin_top = 122.0
+margin_right = 67.0
+margin_bottom = 131.0
+custom_fonts/font = SubResource( 6 )
+text = "ELEMENTS:"
